@@ -1,0 +1,2 @@
+Information about the Codes :
+The AVR code is burned into the Atmega256.
