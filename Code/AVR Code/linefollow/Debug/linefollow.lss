@@ -1,0 +1,3026 @@
+
+linefollow.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000001ca  00800200  000011ee  00001282  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000011ee  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000000c5  008003ca  008003ca  0000144c  2**0
+                  ALLOC
+  3 .stab         000006e4  00000000  00000000  0000144c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000085  00000000  00000000  00001b30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000080  00000000  00000000  00001bb8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000c5d  00000000  00000000  00001c38  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000398  00000000  00000000  00002895  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000064f  00000000  00000000  00002c2d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000002c8  00000000  00000000  0000327c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000342  00000000  00000000  00003544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000496  00000000  00000000  00003886  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 72 00 	jmp	0xe4	; 0xe4 <__ctors_end>
+       4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+       8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+       c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      10:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      14:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      18:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      1c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      20:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      24:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      28:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      2c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      30:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      34:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      38:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      3c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      40:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      44:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      48:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      4c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      50:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      54:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      58:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      5c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      60:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      64:	0c 94 9a 01 	jmp	0x334	; 0x334 <__vector_25>
+      68:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      6c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      70:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      74:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      78:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      7c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      80:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      84:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      88:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      8c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      90:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      94:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      98:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      9c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      a0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      a4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      a8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      ac:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      b0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      b4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      b8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      bc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      c0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      c4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      c8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      cc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      d0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      d4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      d8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      dc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      e0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+
+000000e4 <__ctors_end>:
+      e4:	11 24       	eor	r1, r1
+      e6:	1f be       	out	0x3f, r1	; 63
+      e8:	cf ef       	ldi	r28, 0xFF	; 255
+      ea:	d1 e2       	ldi	r29, 0x21	; 33
+      ec:	de bf       	out	0x3e, r29	; 62
+      ee:	cd bf       	out	0x3d, r28	; 61
+      f0:	00 e0       	ldi	r16, 0x00	; 0
+      f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+      f4:	13 e0       	ldi	r17, 0x03	; 3
+      f6:	a0 e0       	ldi	r26, 0x00	; 0
+      f8:	b2 e0       	ldi	r27, 0x02	; 2
+      fa:	ee ee       	ldi	r30, 0xEE	; 238
+      fc:	f1 e1       	ldi	r31, 0x11	; 17
+      fe:	00 e0       	ldi	r16, 0x00	; 0
+     100:	0b bf       	out	0x3b, r16	; 59
+     102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+     104:	07 90       	elpm	r0, Z+
+     106:	0d 92       	st	X+, r0
+     108:	aa 3c       	cpi	r26, 0xCA	; 202
+     10a:	b1 07       	cpc	r27, r17
+     10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+     10e:	14 e0       	ldi	r17, 0x04	; 4
+     110:	aa ec       	ldi	r26, 0xCA	; 202
+     112:	b3 e0       	ldi	r27, 0x03	; 3
+     114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+     116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+     118:	af 38       	cpi	r26, 0x8F	; 143
+     11a:	b1 07       	cpc	r27, r17
+     11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+     11e:	0e 94 ae 07 	call	0xf5c	; 0xf5c <main>
+     122:	0c 94 f5 08 	jmp	0x11ea	; 0x11ea <_exit>
+
+00000126 <__bad_interrupt>:
+     126:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000012a <read_adc>:
+#define ADC_VREF_TYPE ((0<<REFS1) | (0<<REFS0) | (0<<ADLAR))
+
+// Read the AD conversion result
+unsigned int read_adc(unsigned char adc_input)
+{
+	ADMUX=(adc_input & 0x1f) | ADC_VREF_TYPE;
+     12a:	98 2f       	mov	r25, r24
+     12c:	9f 71       	andi	r25, 0x1F	; 31
+     12e:	90 93 7c 00 	sts	0x007C, r25
+	if (adc_input & 0x20) ADCSRB|=(1<<MUX5);
+     132:	85 ff       	sbrs	r24, 5
+     134:	06 c0       	rjmp	.+12     	; 0x142 <read_adc+0x18>
+     136:	eb e7       	ldi	r30, 0x7B	; 123
+     138:	f0 e0       	ldi	r31, 0x00	; 0
+     13a:	80 81       	ld	r24, Z
+     13c:	88 60       	ori	r24, 0x08	; 8
+     13e:	80 83       	st	Z, r24
+     140:	05 c0       	rjmp	.+10     	; 0x14c <read_adc+0x22>
+	else ADCSRB&= ~(1<<MUX5);
+     142:	eb e7       	ldi	r30, 0x7B	; 123
+     144:	f0 e0       	ldi	r31, 0x00	; 0
+     146:	80 81       	ld	r24, Z
+     148:	87 7f       	andi	r24, 0xF7	; 247
+     14a:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     14c:	81 e3       	ldi	r24, 0x31	; 49
+     14e:	8a 95       	dec	r24
+     150:	f1 f7       	brne	.-4      	; 0x14e <read_adc+0x24>
+     152:	00 00       	nop
+	// Delay needed for the stabilization of the ADC input voltage
+	_delay_us(10);
+	// Start the AD conversion
+	ADCSRA|=(1<<ADSC);
+     154:	ea e7       	ldi	r30, 0x7A	; 122
+     156:	f0 e0       	ldi	r31, 0x00	; 0
+     158:	80 81       	ld	r24, Z
+     15a:	80 64       	ori	r24, 0x40	; 64
+     15c:	80 83       	st	Z, r24
+	// Wait for the AD conversion to complete
+	while ((ADCSRA & (1<<ADIF))==0);
+     15e:	80 81       	ld	r24, Z
+     160:	84 ff       	sbrs	r24, 4
+     162:	fd cf       	rjmp	.-6      	; 0x15e <read_adc+0x34>
+	ADCSRA|=(1<<ADIF);
+     164:	ea e7       	ldi	r30, 0x7A	; 122
+     166:	f0 e0       	ldi	r31, 0x00	; 0
+     168:	80 81       	ld	r24, Z
+     16a:	80 61       	ori	r24, 0x10	; 16
+     16c:	80 83       	st	Z, r24
+	return ADCW;
+     16e:	80 91 78 00 	lds	r24, 0x0078
+     172:	90 91 79 00 	lds	r25, 0x0079
+}
+     176:	08 95       	ret
+
+00000178 <init>:
+{
+	// Declare your local variables here
+
+	// Crystal Oscillator division factor: 1
+	#pragma optsize-
+	CLKPR=(1<<CLKPCE);
+     178:	e1 e6       	ldi	r30, 0x61	; 97
+     17a:	f0 e0       	ldi	r31, 0x00	; 0
+     17c:	80 e8       	ldi	r24, 0x80	; 128
+     17e:	80 83       	st	Z, r24
+	CLKPR=(0<<CLKPCE) | (0<<CLKPS3) | (0<<CLKPS2) | (0<<CLKPS1) | (0<<CLKPS0);
+     180:	10 82       	st	Z, r1
+	#endif
+
+	// Input/Output Ports initialization
+	// Port A initialization
+	// Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRA=(0<<DDA7) | (0<<DDA6) | (0<<DDA5) | (0<<DDA4) | (0<<DDA3) | (0<<DDA2) | (0<<DDA1) | (0<<DDA0);
+     182:	11 b8       	out	0x01, r1	; 1
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTA=(0<<PORTA7) | (0<<PORTA6) | (0<<PORTA5) | (0<<PORTA4) | (0<<PORTA3) | (0<<PORTA2) | (0<<PORTA1) | (0<<PORTA0);
+     184:	12 b8       	out	0x02, r1	; 2
+
+	// Port B initialization
+	// Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRB=(0<<DDB7) | (0<<DDB6) | (0<<DDB5) | (0<<DDB4) | (0<<DDB3) | (0<<DDB2) | (0<<DDB1) | (0<<DDB0);
+     186:	14 b8       	out	0x04, r1	; 4
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTB=(0<<PORTB7) | (0<<PORTB6) | (0<<PORTB5) | (0<<PORTB4) | (0<<PORTB3) | (0<<PORTB2) | (0<<PORTB1) | (0<<PORTB0);
+     188:	15 b8       	out	0x05, r1	; 5
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTC=(0<<PORTC7) | (0<<PORTC6) | (0<<PORTC5) | (0<<PORTC4) | (0<<PORTC3) | (0<<PORTC2) | (0<<PORTC1) | (0<<PORTC0);
+*/
+	// Port D initialization
+	// Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRD=(0<<DDD7) | (0<<DDD6) | (0<<DDD5) | (0<<DDD4) | (0<<DDD3) | (0<<DDD2) | (0<<DDD1) | (0<<DDD0);
+     18a:	1a b8       	out	0x0a, r1	; 10
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTD=(0<<PORTD7) | (0<<PORTD6) | (0<<PORTD5) | (0<<PORTD4) | (0<<PORTD3) | (0<<PORTD2) | (0<<PORTD1) | (0<<PORTD0);
+     18c:	1b b8       	out	0x0b, r1	; 11
+
+	// Port E initialization
+	// Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0=Out
+	DDRE=(1<<DDE7) | (1<<DDE6) | (1<<DDE5) | (1<<DDE4) | (1<<DDE3) | (1<<DDE2) | (1<<DDE1) | (1<<DDE0);
+     18e:	9f ef       	ldi	r25, 0xFF	; 255
+     190:	9d b9       	out	0x0d, r25	; 13
+	// State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+	PORTE=(0<<PORTE7) | (0<<PORTE6) | (0<<PORTE5) | (0<<PORTE4) | (0<<PORTE3) | (0<<PORTE2) | (0<<PORTE1) | (0<<PORTE0);
+     192:	1e b8       	out	0x0e, r1	; 14
+
+	// Port F initialization
+	// Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRF=(0<<DDF7) | (0<<DDF6) | (0<<DDF5) | (0<<DDF4) | (0<<DDF3) | (0<<DDF2) | (0<<DDF1) | (0<<DDF0);
+     194:	10 ba       	out	0x10, r1	; 16
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTF=(0<<PORTF7) | (0<<PORTF6) | (0<<PORTF5) | (0<<PORTF4) | (0<<PORTF3) | (0<<PORTF2) | (0<<PORTF1) | (0<<PORTF0);
+     196:	11 ba       	out	0x11, r1	; 17
+
+	// Port G initialization
+	// Function: Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRG=(0<<DDG5) | (0<<DDG4) | (0<<DDG3) | (0<<DDG2) | (0<<DDG1) | (0<<DDG0);
+     198:	13 ba       	out	0x13, r1	; 19
+	// State: Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTG=(0<<PORTG5) | (0<<PORTG4) | (0<<PORTG3) | (0<<PORTG2) | (0<<PORTG1) | (0<<PORTG0);
+     19a:	14 ba       	out	0x14, r1	; 20
+
+	// Port H initialization
+	// Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRH=(0<<DDH7) | (0<<DDH6) | (0<<DDH5) | (0<<DDH4) | (0<<DDH3) | (0<<DDH2) | (0<<DDH1) | (0<<DDH0);
+     19c:	10 92 01 01 	sts	0x0101, r1
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTH=(0<<PORTH7) | (0<<PORTH6) | (0<<PORTH5) | (0<<PORTH4) | (0<<PORTH3) | (0<<PORTH2) | (0<<PORTH1) | (0<<PORTH0);
+     1a0:	10 92 02 01 	sts	0x0102, r1
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTJ=(0<<PORTJ7) | (0<<PORTJ6) | (0<<PORTJ5) | (0<<PORTJ4) | (0<<PORTJ3) | (0<<PORTJ2) | (0<<PORTJ1) | (0<<PORTJ0);
+*/
+	// Port K initialization
+	// Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRK=(0<<DDK7) | (0<<DDK6) | (0<<DDK5) | (0<<DDK4) | (0<<DDK3) | (0<<DDK2) | (0<<DDK1) | (0<<DDK0);
+     1a4:	10 92 07 01 	sts	0x0107, r1
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTK=(0<<PORTK7) | (0<<PORTK6) | (0<<PORTK5) | (0<<PORTK4) | (0<<PORTK3) | (0<<PORTK2) | (0<<PORTK1) | (0<<PORTK0);
+     1a8:	10 92 08 01 	sts	0x0108, r1
+
+	// Port L initialization
+	// Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In
+	DDRL=(0<<DDL7) | (0<<DDL6) | (0<<DDL5) | (0<<DDL4) | (0<<DDL3) | (0<<DDL2) | (0<<DDL1) | (0<<DDL0);
+     1ac:	10 92 0a 01 	sts	0x010A, r1
+	// State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T
+	PORTL=(0<<PORTL7) | (0<<PORTL6) | (0<<PORTL5) | (0<<PORTL4) | (0<<PORTL3) | (0<<PORTL2) | (0<<PORTL1) | (0<<PORTL0);
+     1b0:	10 92 0b 01 	sts	0x010B, r1
+	// Clock source: System Clock
+	// Clock value: Timer 0 Stopped
+	// Mode: Normal top=0xFF
+	// OC0A output: Disconnected
+	// OC0B output: Disconnected
+	TCCR0A=(0<<COM0A1) | (0<<COM0A0) | (0<<COM0B1) | (0<<COM0B0) | (0<<WGM01) | (0<<WGM00);
+     1b4:	14 bc       	out	0x24, r1	; 36
+	TCCR0B=(0<<WGM02) | (0<<CS02) | (0<<CS01) | (0<<CS00);
+     1b6:	15 bc       	out	0x25, r1	; 37
+	TCNT0=0x00;
+     1b8:	16 bc       	out	0x26, r1	; 38
+	OCR0A=0x00;
+     1ba:	17 bc       	out	0x27, r1	; 39
+	OCR0B=0x00;
+     1bc:	18 bc       	out	0x28, r1	; 40
+	// Timer1 Overflow Interrupt: Off
+	// Input Capture Interrupt: Off
+	// Compare A Match Interrupt: Off
+	// Compare B Match Interrupt: Off
+	// Compare C Match Interrupt: Off
+	TCCR1A=(0<<COM1A1) | (0<<COM1A0) | (0<<COM1B1) | (0<<COM1B0) | (0<<COM1C1) | (0<<COM1C0) | (0<<WGM11) | (0<<WGM10);
+     1be:	10 92 80 00 	sts	0x0080, r1
+	TCCR1B=(0<<ICNC1) | (0<<ICES1) | (0<<WGM13) | (0<<WGM12) | (0<<CS12) | (0<<CS11) | (0<<CS10);
+     1c2:	10 92 81 00 	sts	0x0081, r1
+	TCNT1H=0x00;
+     1c6:	10 92 85 00 	sts	0x0085, r1
+	TCNT1L=0x00;
+     1ca:	10 92 84 00 	sts	0x0084, r1
+	ICR1H=0x00;
+     1ce:	10 92 87 00 	sts	0x0087, r1
+	ICR1L=0x00;
+     1d2:	10 92 86 00 	sts	0x0086, r1
+	OCR1AH=0x00;
+     1d6:	10 92 89 00 	sts	0x0089, r1
+	OCR1AL=0x00;
+     1da:	10 92 88 00 	sts	0x0088, r1
+	OCR1BH=0x00;
+     1de:	10 92 8b 00 	sts	0x008B, r1
+	OCR1BL=0x00;
+     1e2:	10 92 8a 00 	sts	0x008A, r1
+	OCR1CH=0x00;
+     1e6:	10 92 8d 00 	sts	0x008D, r1
+	OCR1CL=0x00;
+     1ea:	10 92 8c 00 	sts	0x008C, r1
+	// Clock source: System Clock
+	// Clock value: Timer2 Stopped
+	// Mode: Normal top=0xFF
+	// OC2A output: Disconnected
+	// OC2B output: Disconnected
+	ASSR=(0<<EXCLK) | (0<<AS2);
+     1ee:	10 92 b6 00 	sts	0x00B6, r1
+	TCCR2A=(0<<COM2A1) | (0<<COM2A0) | (0<<COM2B1) | (0<<COM2B0) | (0<<WGM21) | (0<<WGM20);
+     1f2:	10 92 b0 00 	sts	0x00B0, r1
+	TCCR2B=(0<<WGM22) | (0<<CS22) | (0<<CS21) | (0<<CS20);
+     1f6:	10 92 b1 00 	sts	0x00B1, r1
+	TCNT2=0x00;
+     1fa:	10 92 b2 00 	sts	0x00B2, r1
+	OCR2A=0x00;
+     1fe:	10 92 b3 00 	sts	0x00B3, r1
+	OCR2B=0x00;
+     202:	10 92 b4 00 	sts	0x00B4, r1
+	// Timer3 Overflow Interrupt: Off
+	// Input Capture Interrupt: Off
+	// Compare A Match Interrupt: Off
+	// Compare B Match Interrupt: Off
+	// Compare C Match Interrupt: Off
+	TCCR3A=(0<<COM3A1) | (0<<COM3A0) | (0<<COM3B1) | (0<<COM3B0) | (0<<COM3C1) | (0<<COM3C0) | (0<<WGM31) | (0<<WGM30);
+     206:	10 92 90 00 	sts	0x0090, r1
+	TCCR3B=(0<<ICNC3) | (0<<ICES3) | (0<<WGM33) | (0<<WGM32) | (0<<CS32) | (0<<CS31) | (0<<CS30);
+     20a:	10 92 91 00 	sts	0x0091, r1
+	TCNT3H=0x00;
+     20e:	10 92 95 00 	sts	0x0095, r1
+	TCNT3L=0x00;
+     212:	10 92 94 00 	sts	0x0094, r1
+	ICR3H=0x00;
+     216:	10 92 97 00 	sts	0x0097, r1
+	ICR3L=0x00;
+     21a:	10 92 96 00 	sts	0x0096, r1
+	OCR3AH=0x00;
+     21e:	10 92 99 00 	sts	0x0099, r1
+	OCR3AL=0x00;
+     222:	10 92 98 00 	sts	0x0098, r1
+	OCR3BH=0x00;
+     226:	10 92 9b 00 	sts	0x009B, r1
+	OCR3BL=0x00;
+     22a:	10 92 9a 00 	sts	0x009A, r1
+	OCR3CH=0x00;
+     22e:	10 92 9d 00 	sts	0x009D, r1
+	OCR3CL=0x00;
+     232:	10 92 9c 00 	sts	0x009C, r1
+	// Timer4 Overflow Interrupt: Off
+	// Input Capture Interrupt: Off
+	// Compare A Match Interrupt: Off
+	// Compare B Match Interrupt: Off
+	// Compare C Match Interrupt: Off
+	TCCR4A=(0<<COM4A1) | (0<<COM4A0) | (0<<COM4B1) | (0<<COM4B0) | (0<<COM4C1) | (0<<COM4C0) | (0<<WGM41) | (0<<WGM40);
+     236:	10 92 a0 00 	sts	0x00A0, r1
+	TCCR4B=(0<<ICNC4) | (0<<ICES4) | (0<<WGM43) | (0<<WGM42) | (0<<CS42) | (0<<CS41) | (0<<CS40);
+     23a:	10 92 a1 00 	sts	0x00A1, r1
+	TCNT4H=0x00;
+     23e:	10 92 a5 00 	sts	0x00A5, r1
+	TCNT4L=0x00;
+     242:	10 92 a4 00 	sts	0x00A4, r1
+	ICR4H=0x00;
+     246:	10 92 a7 00 	sts	0x00A7, r1
+	ICR4L=0x00;
+     24a:	10 92 a6 00 	sts	0x00A6, r1
+	OCR4AH=0x00;
+     24e:	10 92 a9 00 	sts	0x00A9, r1
+	OCR4AL=0x00;
+     252:	10 92 a8 00 	sts	0x00A8, r1
+	OCR4BH=0x00;
+     256:	10 92 ab 00 	sts	0x00AB, r1
+	OCR4BL=0x00;
+     25a:	10 92 aa 00 	sts	0x00AA, r1
+	OCR4CH=0x00;
+     25e:	10 92 ad 00 	sts	0x00AD, r1
+	OCR4CL=0x00;
+     262:	10 92 ac 00 	sts	0x00AC, r1
+	// Timer5 Overflow Interrupt: Off
+	// Input Capture Interrupt: Off
+	// Compare A Match Interrupt: Off
+	// Compare B Match Interrupt: Off
+	// Compare C Match Interrupt: Off
+	TCCR5A=(0<<COM5A1) | (0<<COM5A0) | (0<<COM5B1) | (0<<COM5B0) | (0<<COM5C1) | (0<<COM5C0) | (0<<WGM51) | (0<<WGM50);
+     266:	10 92 20 01 	sts	0x0120, r1
+	TCCR5B=(0<<ICNC5) | (0<<ICES5) | (0<<WGM53) | (0<<WGM52) | (0<<CS52) | (0<<CS51) | (0<<CS50);
+     26a:	10 92 21 01 	sts	0x0121, r1
+	TCNT5H=0x00;
+     26e:	10 92 25 01 	sts	0x0125, r1
+	TCNT5L=0x00;
+     272:	10 92 24 01 	sts	0x0124, r1
+	ICR5H=0x00;
+     276:	10 92 27 01 	sts	0x0127, r1
+	ICR5L=0x00;
+     27a:	10 92 26 01 	sts	0x0126, r1
+	OCR5AH=0x00;
+     27e:	10 92 29 01 	sts	0x0129, r1
+	OCR5AL=0x00;
+     282:	10 92 28 01 	sts	0x0128, r1
+	OCR5BH=0x00;
+     286:	10 92 2b 01 	sts	0x012B, r1
+	OCR5BL=0x00;
+     28a:	10 92 2a 01 	sts	0x012A, r1
+	OCR5CH=0x00;
+     28e:	10 92 2d 01 	sts	0x012D, r1
+	OCR5CL=0x00;
+     292:	10 92 2c 01 	sts	0x012C, r1
+
+	// Timer/Counter 0 Interrupt(s) initialization
+	TIMSK0=(0<<OCIE0B) | (0<<OCIE0A) | (0<<TOIE0);
+     296:	10 92 6e 00 	sts	0x006E, r1
+
+	// Timer/Counter 1 Interrupt(s) initialization
+	TIMSK1=(0<<ICIE1) | (0<<OCIE1C) | (0<<OCIE1B) | (0<<OCIE1A) | (0<<TOIE1);
+     29a:	10 92 6f 00 	sts	0x006F, r1
+
+	// Timer/Counter 2 Interrupt(s) initialization
+	TIMSK2=(0<<OCIE2B) | (0<<OCIE2A) | (0<<TOIE2);
+     29e:	10 92 70 00 	sts	0x0070, r1
+
+	// Timer/Counter 3 Interrupt(s) initialization
+	TIMSK3=(0<<ICIE3) | (0<<OCIE3C) | (0<<OCIE3B) | (0<<OCIE3A) | (0<<TOIE3);
+     2a2:	10 92 71 00 	sts	0x0071, r1
+
+	// Timer/Counter 4 Interrupt(s) initialization
+	TIMSK4=(0<<ICIE4) | (0<<OCIE4C) | (0<<OCIE4B) | (0<<OCIE4A) | (0<<TOIE4);
+     2a6:	10 92 72 00 	sts	0x0072, r1
+
+	// Timer/Counter 5 Interrupt(s) initialization
+	TIMSK5=(0<<ICIE5) | (0<<OCIE5C) | (0<<OCIE5B) | (0<<OCIE5A) | (0<<TOIE5);
+     2aa:	10 92 73 00 	sts	0x0073, r1
+	// INT3: Off
+	// INT4: Off
+	// INT5: Off
+	// INT6: Off
+	// INT7: Off
+	EICRA=(0<<ISC31) | (0<<ISC30) | (0<<ISC21) | (0<<ISC20) | (0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
+     2ae:	10 92 69 00 	sts	0x0069, r1
+	EICRB=(0<<ISC71) | (0<<ISC70) | (0<<ISC61) | (0<<ISC60) | (0<<ISC51) | (0<<ISC50) | (0<<ISC41) | (0<<ISC40);
+     2b2:	10 92 6a 00 	sts	0x006A, r1
+	EIMSK=(0<<INT7) | (0<<INT6) | (0<<INT5) | (0<<INT4) | (0<<INT3) | (0<<INT2) | (0<<INT1) | (0<<INT0);
+     2b6:	1d ba       	out	0x1d, r1	; 29
+	// PCINT19 interrupt: Off
+	// PCINT20 interrupt: Off
+	// PCINT21 interrupt: Off
+	// PCINT22 interrupt: Off
+	// PCINT23 interrupt: Off
+	PCMSK0=(0<<PCINT7) | (0<<PCINT6) | (0<<PCINT5) | (0<<PCINT4) | (0<<PCINT3) | (0<<PCINT2) | (0<<PCINT1) | (0<<PCINT0);
+     2b8:	10 92 6b 00 	sts	0x006B, r1
+	PCMSK1=(0<<PCINT15) | (0<<PCINT14) | (0<<PCINT13) | (0<<PCINT12) | (0<<PCINT11) | (0<<PCINT10) | (0<<PCINT9) | (0<<PCINT8);
+     2bc:	10 92 6c 00 	sts	0x006C, r1
+	PCMSK2=(0<<PCINT23) | (0<<PCINT22) | (0<<PCINT21) | (0<<PCINT20) | (0<<PCINT19) | (0<<PCINT18) | (0<<PCINT17) | (0<<PCINT16);
+     2c0:	10 92 6d 00 	sts	0x006D, r1
+	PCICR=(0<<PCIE2) | (0<<PCIE1) | (0<<PCIE0);
+     2c4:	10 92 68 00 	sts	0x0068, r1
+
+	// USART0 initialization
+	// USART0 disabled
+	UCSR0B=(0<<RXCIE0) | (0<<TXCIE0) | (0<<UDRIE0) | (0<<RXEN0) | (0<<TXEN0) | (0<<UCSZ02) | (0<<RXB80) | (0<<TXB80);
+     2c8:	10 92 c1 00 	sts	0x00C1, r1
+
+	// USART1 initialization
+	// USART1 disabled
+	UCSR1B=(0<<RXCIE1) | (0<<TXCIE1) | (0<<UDRIE1) | (0<<RXEN1) | (0<<TXEN1) | (0<<UCSZ12) | (0<<RXB81) | (0<<TXB81);
+     2cc:	10 92 c9 00 	sts	0x00C9, r1
+
+	// USART2 initialization
+	// USART2 disabled
+	UCSR2B=(0<<RXCIE2) | (0<<TXCIE2) | (0<<UDRIE2) | (0<<RXEN2) | (0<<TXEN2) | (0<<UCSZ22) | (0<<RXB82) | (0<<TXB82);
+     2d0:	10 92 d1 00 	sts	0x00D1, r1
+
+	// USART3 initialization
+	// USART3 disabled
+	UCSR3B=(0<<RXCIE3) | (0<<TXCIE3) | (0<<UDRIE3) | (0<<RXEN3) | (0<<TXEN3) | (0<<UCSZ32) | (0<<RXB83) | (0<<TXB83);
+     2d4:	10 92 31 01 	sts	0x0131, r1
+	// Analog Comparator: Off
+	// The Analog Comparator's positive input is
+	// connected to the AIN0 pin
+	// The Analog Comparator's negative input is
+	// connected to the AIN1 pin
+	ACSR=(1<<ACD) | (0<<ACBG) | (0<<ACO) | (0<<ACI) | (0<<ACIE) | (0<<ACIC) | (0<<ACIS1) | (0<<ACIS0);
+     2d8:	80 bf       	out	0x30, r24	; 48
+	// Digital input buffer on AIN0: On
+	// Digital input buffer on AIN1: On
+	DIDR1=(0<<AIN0D) | (0<<AIN1D);
+     2da:	10 92 7f 00 	sts	0x007F, r1
+	// ADC Clock frequency: 1000.000 kHz
+	// ADC Voltage Reference: AREF pin
+	// ADC Auto Trigger Source: ADC Stopped
+	// Digital input buffers on ADC0: On, ADC1: On, ADC2: On, ADC3: On
+	// ADC4: On, ADC5: On, ADC6: On, ADC7: On
+	DIDR0=(0<<ADC7D) | (0<<ADC6D) | (0<<ADC5D) | (0<<ADC4D) | (0<<ADC3D) | (0<<ADC2D) | (0<<ADC1D) | (0<<ADC0D);
+     2de:	10 92 7e 00 	sts	0x007E, r1
+	// Digital input buffers on ADC8: On, ADC9: On, ADC10: On, ADC11: On
+	// ADC12: On, ADC13: On, ADC14: On, ADC15: On
+	DIDR2=(0<<ADC15D) | (0<<ADC14D) | (0<<ADC13D) | (0<<ADC12D) | (0<<ADC11D) | (0<<ADC10D) | (0<<ADC9D) | (0<<ADC8D);
+     2e2:	10 92 7d 00 	sts	0x007D, r1
+	ADMUX=ADC_VREF_TYPE;
+     2e6:	10 92 7c 00 	sts	0x007C, r1
+	ADCSRA=(1<<ADEN) | (0<<ADSC) | (0<<ADATE) | (0<<ADIF) | (0<<ADIE) | (0<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+     2ea:	83 e8       	ldi	r24, 0x83	; 131
+     2ec:	80 93 7a 00 	sts	0x007A, r24
+	ADCSRB=(0<<MUX5) | (0<<ADTS2) | (0<<ADTS1) | (0<<ADTS0);
+     2f0:	10 92 7b 00 	sts	0x007B, r1
+
+	// SPI initialization
+	// SPI disabled
+	SPCR=(0<<SPIE) | (0<<SPE) | (0<<DORD) | (0<<MSTR) | (0<<CPOL) | (0<<CPHA) | (0<<SPR1) | (0<<SPR0);
+     2f4:	1c bc       	out	0x2c, r1	; 44
+
+	// TWI initialization
+	// TWI disabled
+	TWCR=(0<<TWEA) | (0<<TWSTA) | (0<<TWSTO) | (0<<TWEN) | (0<<TWIE);
+     2f6:	10 92 bc 00 	sts	0x00BC, r1
+
+	
+     2fa:	08 95       	ret
+
+000002fc <uart0_init>:
+
+volatile unsigned char data;
+
+void uart0_init()
+{
+	UCSR0B = 0x00;							//disable while setting baud rate
+     2fc:	e1 ec       	ldi	r30, 0xC1	; 193
+     2fe:	f0 e0       	ldi	r31, 0x00	; 0
+     300:	10 82       	st	Z, r1
+	UCSR0A = 0x00;
+     302:	10 92 c0 00 	sts	0x00C0, r1
+	UCSR0C = 0x06;
+     306:	a2 ec       	ldi	r26, 0xC2	; 194
+     308:	b0 e0       	ldi	r27, 0x00	; 0
+     30a:	86 e0       	ldi	r24, 0x06	; 6
+     30c:	8c 93       	st	X, r24
+	UBRR0L = 0x5F; 							//9600BPS at 14745600Hz
+     30e:	9f e5       	ldi	r25, 0x5F	; 95
+     310:	90 93 c4 00 	sts	0x00C4, r25
+	UBRR0H = 0x00;
+     314:	10 92 c5 00 	sts	0x00C5, r1
+	UCSR0B = 0x98;
+     318:	98 e9       	ldi	r25, 0x98	; 152
+     31a:	90 83       	st	Z, r25
+	UCSR0C = 3<<1;							//setting 8-bit character and 1 stop bit
+     31c:	8c 93       	st	X, r24
+	UCSR0B = RX | TX;
+     31e:	88 e1       	ldi	r24, 0x18	; 24
+     320:	80 83       	st	Z, r24
+}
+     322:	08 95       	ret
+
+00000324 <uart_tx>:
+
+
+void uart_tx(char data)
+{
+	while(!(UCSR0A & TE));						//waiting to transmit
+     324:	e0 ec       	ldi	r30, 0xC0	; 192
+     326:	f0 e0       	ldi	r31, 0x00	; 0
+     328:	90 81       	ld	r25, Z
+     32a:	95 ff       	sbrs	r25, 5
+     32c:	fd cf       	rjmp	.-6      	; 0x328 <uart_tx+0x4>
+	UDR0 = data;
+     32e:	80 93 c6 00 	sts	0x00C6, r24
+}
+     332:	08 95       	ret
+
+00000334 <__vector_25>:
+
+ISR(USART0_RX_vect)
+{
+     334:	1f 92       	push	r1
+     336:	0f 92       	push	r0
+     338:	0f b6       	in	r0, 0x3f	; 63
+     33a:	0f 92       	push	r0
+     33c:	11 24       	eor	r1, r1
+     33e:	8f 93       	push	r24
+	data = UDR0;
+     340:	80 91 c6 00 	lds	r24, 0x00C6
+     344:	80 93 8e 04 	sts	0x048E, r24
+}
+     348:	8f 91       	pop	r24
+     34a:	0f 90       	pop	r0
+     34c:	0f be       	out	0x3f, r0	; 63
+     34e:	0f 90       	pop	r0
+     350:	1f 90       	pop	r1
+     352:	18 95       	reti
+
+00000354 <uart_rx>:
+
+
+
+char uart_rx()
+{
+	while(!(UCSR0A & RE));						//waiting to receive
+     354:	e0 ec       	ldi	r30, 0xC0	; 192
+     356:	f0 e0       	ldi	r31, 0x00	; 0
+     358:	80 81       	ld	r24, Z
+     35a:	88 23       	and	r24, r24
+     35c:	ec f7       	brge	.-6      	; 0x358 <uart_rx+0x4>
+	return UDR0;
+     35e:	80 91 c6 00 	lds	r24, 0x00C6
+}
+     362:	08 95       	ret
+
+00000364 <get_input>:
+	such that
+*Example Call: get_input();
+*/ 
+
+/***********************************************************************************************************/
+void get_input(){ 
+     364:	1f 93       	push	r17
+     366:	cf 93       	push	r28
+     368:	df 93       	push	r29
+	int i,k,o;
+	char ch = 0;
+	
+	uart0_init();
+     36a:	0e 94 7e 01 	call	0x2fc	; 0x2fc <uart0_init>
+     36e:	ca e7       	ldi	r28, 0x7A	; 122
+     370:	d4 e0       	ldi	r29, 0x04	; 4
+	i = 0;
+	//getting input from xbee
+	while(ch != '*'){
+		ch = uart_rx();
+     372:	0e 94 aa 01 	call	0x354	; 0x354 <uart_rx>
+     376:	18 2f       	mov	r17, r24
+		xbee_input[i++] = ch;
+     378:	89 93       	st	Y+, r24
+		uart_tx(xbee_input[i - 1]);
+     37a:	0e 94 92 01 	call	0x324	; 0x324 <uart_tx>
+	char ch = 0;
+	
+	uart0_init();
+	i = 0;
+	//getting input from xbee
+	while(ch != '*'){
+     37e:	1a 32       	cpi	r17, 0x2A	; 42
+     380:	c1 f7       	brne	.-16     	; 0x372 <get_input+0xe>
+		ch = uart_rx();
+		xbee_input[i++] = ch;
+		uart_tx(xbee_input[i - 1]);
+						
+	}
+	start = xbee_input[0] - '0';
+     382:	80 91 7a 04 	lds	r24, 0x047A
+     386:	90 e0       	ldi	r25, 0x00	; 0
+     388:	c0 97       	sbiw	r24, 0x30	; 48
+     38a:	90 93 cb 03 	sts	0x03CB, r25
+     38e:	80 93 ca 03 	sts	0x03CA, r24
+	i = 1;
+	num_positions = 0;
+     392:	10 92 cd 03 	sts	0x03CD, r1
+     396:	10 92 cc 03 	sts	0x03CC, r1
+	ch = xbee_input[i];
+	//the positions and the respective orientations are saved in arrays
+	while(ch != '*'){
+     39a:	80 91 7b 04 	lds	r24, 0x047B
+     39e:	8a 32       	cpi	r24, 0x2A	; 42
+     3a0:	21 f1       	breq	.+72     	; 0x3ea <get_input+0x86>
+     3a2:	ae ec       	ldi	r26, 0xCE	; 206
+     3a4:	b3 e0       	ldi	r27, 0x03	; 3
+     3a6:	c2 ee       	ldi	r28, 0xE2	; 226
+     3a8:	d3 e0       	ldi	r29, 0x03	; 3
+     3aa:	2d e7       	ldi	r18, 0x7D	; 125
+     3ac:	34 e0       	ldi	r19, 0x04	; 4
+     3ae:	40 e0       	ldi	r20, 0x00	; 0
+     3b0:	50 e0       	ldi	r21, 0x00	; 0
+	such that
+*Example Call: get_input();
+*/ 
+
+/***********************************************************************************************************/
+void get_input(){ 
+     3b2:	f9 01       	movw	r30, r18
+     3b4:	32 97       	sbiw	r30, 0x02	; 2
+	i = 1;
+	num_positions = 0;
+	ch = xbee_input[i];
+	//the positions and the respective orientations are saved in arrays
+	while(ch != '*'){
+		position[num_positions] = xbee_input[i++] - 'a';
+     3b6:	80 81       	ld	r24, Z
+     3b8:	90 e0       	ldi	r25, 0x00	; 0
+     3ba:	81 56       	subi	r24, 0x61	; 97
+     3bc:	90 40       	sbci	r25, 0x00	; 0
+     3be:	8d 93       	st	X+, r24
+     3c0:	9d 93       	st	X+, r25
+	such that
+*Example Call: get_input();
+*/ 
+
+/***********************************************************************************************************/
+void get_input(){ 
+     3c2:	f9 01       	movw	r30, r18
+     3c4:	31 97       	sbiw	r30, 0x01	; 1
+	num_positions = 0;
+	ch = xbee_input[i];
+	//the positions and the respective orientations are saved in arrays
+	while(ch != '*'){
+		position[num_positions] = xbee_input[i++] - 'a';
+		orientation[num_positions] = xbee_input[i++] - '0';
+     3c6:	80 81       	ld	r24, Z
+     3c8:	90 e0       	ldi	r25, 0x00	; 0
+     3ca:	c0 97       	sbiw	r24, 0x30	; 48
+     3cc:	89 93       	st	Y+, r24
+     3ce:	99 93       	st	Y+, r25
+		num_positions++;
+     3d0:	4f 5f       	subi	r20, 0xFF	; 255
+     3d2:	5f 4f       	sbci	r21, 0xFF	; 255
+     3d4:	2e 5f       	subi	r18, 0xFE	; 254
+     3d6:	3f 4f       	sbci	r19, 0xFF	; 255
+	such that
+*Example Call: get_input();
+*/ 
+
+/***********************************************************************************************************/
+void get_input(){ 
+     3d8:	f9 01       	movw	r30, r18
+     3da:	32 97       	sbiw	r30, 0x02	; 2
+	start = xbee_input[0] - '0';
+	i = 1;
+	num_positions = 0;
+	ch = xbee_input[i];
+	//the positions and the respective orientations are saved in arrays
+	while(ch != '*'){
+     3dc:	80 81       	ld	r24, Z
+     3de:	8a 32       	cpi	r24, 0x2A	; 42
+     3e0:	41 f7       	brne	.-48     	; 0x3b2 <get_input+0x4e>
+     3e2:	50 93 cd 03 	sts	0x03CD, r21
+     3e6:	40 93 cc 03 	sts	0x03CC, r20
+		position[num_positions] = xbee_input[i++] - 'a';
+		orientation[num_positions] = xbee_input[i++] - '0';
+		num_positions++;
+		ch = xbee_input[i];
+	}	
+}
+     3ea:	df 91       	pop	r29
+     3ec:	cf 91       	pop	r28
+     3ee:	1f 91       	pop	r17
+     3f0:	08 95       	ret
+
+000003f2 <_direction>:
+*Example Call: _direction()
+*/
+
+void _direction()
+{
+	if(curr_x & 1){//current row is odd
+     3f2:	80 91 f6 03 	lds	r24, 0x03F6
+     3f6:	90 91 f7 03 	lds	r25, 0x03F7
+     3fa:	80 ff       	sbrs	r24, 0
+     3fc:	83 c0       	rjmp	.+262    	; 0x504 <_direction+0x112>
+		if(dest_x < curr_x){//up
+     3fe:	20 91 f8 03 	lds	r18, 0x03F8
+     402:	30 91 f9 03 	lds	r19, 0x03F9
+     406:	28 17       	cp	r18, r24
+     408:	39 07       	cpc	r19, r25
+     40a:	0c f0       	brlt	.+2      	; 0x40e <_direction+0x1c>
+     40c:	41 c0       	rjmp	.+130    	; 0x490 <_direction+0x9e>
+			
+			if(dest_y < curr_y){//left
+     40e:	40 91 fa 03 	lds	r20, 0x03FA
+     412:	50 91 fb 03 	lds	r21, 0x03FB
+     416:	20 91 fc 03 	lds	r18, 0x03FC
+     41a:	30 91 fd 03 	lds	r19, 0x03FD
+     41e:	42 17       	cp	r20, r18
+     420:	53 07       	cpc	r21, r19
+     422:	64 f4       	brge	.+24     	; 0x43c <_direction+0x4a>
+				//x-- y--
+				next_x = curr_x - 1 ;
+     424:	01 97       	sbiw	r24, 0x01	; 1
+     426:	90 93 ff 03 	sts	0x03FF, r25
+     42a:	80 93 fe 03 	sts	0x03FE, r24
+				next_y = curr_y - 1;
+     42e:	21 50       	subi	r18, 0x01	; 1
+     430:	30 40       	sbci	r19, 0x00	; 0
+     432:	30 93 01 04 	sts	0x0401, r19
+     436:	20 93 00 04 	sts	0x0400, r18
+     43a:	e5 c0       	rjmp	.+458    	; 0x606 <_direction+0x214>
+			}
+			else if(dest_y > curr_y){//right
+     43c:	24 17       	cp	r18, r20
+     43e:	35 07       	cpc	r19, r21
+     440:	64 f4       	brge	.+24     	; 0x45a <_direction+0x68>
+				//x-- y++
+				next_x = curr_x - 1;
+     442:	01 97       	sbiw	r24, 0x01	; 1
+     444:	90 93 ff 03 	sts	0x03FF, r25
+     448:	80 93 fe 03 	sts	0x03FE, r24
+				next_y = curr_y + 1;
+     44c:	2f 5f       	subi	r18, 0xFF	; 255
+     44e:	3f 4f       	sbci	r19, 0xFF	; 255
+     450:	30 93 01 04 	sts	0x0401, r19
+     454:	20 93 00 04 	sts	0x0400, r18
+     458:	d6 c0       	rjmp	.+428    	; 0x606 <_direction+0x214>
+			}
+			else{
+				//same column
+				//we will consider it as a TODO task 
+				if(curr_y > 5){
+     45a:	26 30       	cpi	r18, 0x06	; 6
+     45c:	31 05       	cpc	r19, r1
+     45e:	64 f0       	brlt	.+24     	; 0x478 <_direction+0x86>
+					//x--, y--
+					next_x = curr_x - 1;
+     460:	01 97       	sbiw	r24, 0x01	; 1
+     462:	90 93 ff 03 	sts	0x03FF, r25
+     466:	80 93 fe 03 	sts	0x03FE, r24
+					next_y = curr_y - 1;
+     46a:	21 50       	subi	r18, 0x01	; 1
+     46c:	30 40       	sbci	r19, 0x00	; 0
+     46e:	30 93 01 04 	sts	0x0401, r19
+     472:	20 93 00 04 	sts	0x0400, r18
+     476:	c7 c0       	rjmp	.+398    	; 0x606 <_direction+0x214>
+				}
+				else{
+					//x-- y++
+					next_x = curr_x - 1;
+     478:	01 97       	sbiw	r24, 0x01	; 1
+     47a:	90 93 ff 03 	sts	0x03FF, r25
+     47e:	80 93 fe 03 	sts	0x03FE, r24
+					next_y = curr_y + 1;
+     482:	2f 5f       	subi	r18, 0xFF	; 255
+     484:	3f 4f       	sbci	r19, 0xFF	; 255
+     486:	30 93 01 04 	sts	0x0401, r19
+     48a:	20 93 00 04 	sts	0x0400, r18
+     48e:	bb c0       	rjmp	.+374    	; 0x606 <_direction+0x214>
+				}
+			}
+		}
+		
+		
+		else if(dest_x > curr_x){//down
+     490:	82 17       	cp	r24, r18
+     492:	93 07       	cpc	r25, r19
+     494:	74 f4       	brge	.+28     	; 0x4b2 <_direction+0xc0>
+			//x++ y same
+			next_x = curr_x + 1;
+     496:	01 96       	adiw	r24, 0x01	; 1
+     498:	90 93 ff 03 	sts	0x03FF, r25
+     49c:	80 93 fe 03 	sts	0x03FE, r24
+			next_y = curr_y ;
+     4a0:	80 91 fc 03 	lds	r24, 0x03FC
+     4a4:	90 91 fd 03 	lds	r25, 0x03FD
+     4a8:	90 93 01 04 	sts	0x0401, r25
+     4ac:	80 93 00 04 	sts	0x0400, r24
+     4b0:	aa c0       	rjmp	.+340    	; 0x606 <_direction+0x214>
+
+		}
+		else{
+			//same row number
+			//here row is ODD so decease x
+			if(dest_y < curr_y){//left
+     4b2:	60 91 fa 03 	lds	r22, 0x03FA
+     4b6:	70 91 fb 03 	lds	r23, 0x03FB
+     4ba:	40 91 fc 03 	lds	r20, 0x03FC
+     4be:	50 91 fd 03 	lds	r21, 0x03FD
+     4c2:	64 17       	cp	r22, r20
+     4c4:	75 07       	cpc	r23, r21
+     4c6:	74 f4       	brge	.+28     	; 0x4e4 <_direction+0xf2>
+				//x-- y--
+				next_x = curr_x - 1;
+     4c8:	9c 01       	movw	r18, r24
+     4ca:	21 50       	subi	r18, 0x01	; 1
+     4cc:	30 40       	sbci	r19, 0x00	; 0
+     4ce:	30 93 ff 03 	sts	0x03FF, r19
+     4d2:	20 93 fe 03 	sts	0x03FE, r18
+				next_y = curr_y - 1;
+     4d6:	9a 01       	movw	r18, r20
+     4d8:	21 50       	subi	r18, 0x01	; 1
+     4da:	30 40       	sbci	r19, 0x00	; 0
+     4dc:	30 93 01 04 	sts	0x0401, r19
+     4e0:	20 93 00 04 	sts	0x0400, r18
+
+
+			}
+			if(dest_y > curr_y){//right
+     4e4:	46 17       	cp	r20, r22
+     4e6:	57 07       	cpc	r21, r23
+     4e8:	0c f0       	brlt	.+2      	; 0x4ec <_direction+0xfa>
+     4ea:	8d c0       	rjmp	.+282    	; 0x606 <_direction+0x214>
+				//x-- y++
+				next_x = curr_x - 1;
+     4ec:	01 97       	sbiw	r24, 0x01	; 1
+     4ee:	90 93 ff 03 	sts	0x03FF, r25
+     4f2:	80 93 fe 03 	sts	0x03FE, r24
+				next_y = curr_y + 1;
+     4f6:	4f 5f       	subi	r20, 0xFF	; 255
+     4f8:	5f 4f       	sbci	r21, 0xFF	; 255
+     4fa:	50 93 01 04 	sts	0x0401, r21
+     4fe:	40 93 00 04 	sts	0x0400, r20
+     502:	81 c0       	rjmp	.+258    	; 0x606 <_direction+0x214>
+			}
+		}
+
+	}
+	else{//row is even
+		if(dest_x > curr_x){//down
+     504:	20 91 f8 03 	lds	r18, 0x03F8
+     508:	30 91 f9 03 	lds	r19, 0x03F9
+     50c:	82 17       	cp	r24, r18
+     50e:	93 07       	cpc	r25, r19
+     510:	0c f0       	brlt	.+2      	; 0x514 <_direction+0x122>
+     512:	41 c0       	rjmp	.+130    	; 0x596 <_direction+0x1a4>
+			if(dest_y < curr_y){//left
+     514:	40 91 fa 03 	lds	r20, 0x03FA
+     518:	50 91 fb 03 	lds	r21, 0x03FB
+     51c:	20 91 fc 03 	lds	r18, 0x03FC
+     520:	30 91 fd 03 	lds	r19, 0x03FD
+     524:	42 17       	cp	r20, r18
+     526:	53 07       	cpc	r21, r19
+     528:	64 f4       	brge	.+24     	; 0x542 <_direction+0x150>
+				//x++ y--
+				next_x = curr_x + 1;
+     52a:	01 96       	adiw	r24, 0x01	; 1
+     52c:	90 93 ff 03 	sts	0x03FF, r25
+     530:	80 93 fe 03 	sts	0x03FE, r24
+				next_y = curr_y - 1;
+     534:	21 50       	subi	r18, 0x01	; 1
+     536:	30 40       	sbci	r19, 0x00	; 0
+     538:	30 93 01 04 	sts	0x0401, r19
+     53c:	20 93 00 04 	sts	0x0400, r18
+     540:	62 c0       	rjmp	.+196    	; 0x606 <_direction+0x214>
+			}
+			else if(dest_y > curr_y){//right
+     542:	24 17       	cp	r18, r20
+     544:	35 07       	cpc	r19, r21
+     546:	64 f4       	brge	.+24     	; 0x560 <_direction+0x16e>
+				//x++ y++
+				next_x = curr_x + 1;
+     548:	01 96       	adiw	r24, 0x01	; 1
+     54a:	90 93 ff 03 	sts	0x03FF, r25
+     54e:	80 93 fe 03 	sts	0x03FE, r24
+				next_y = curr_y + 1;
+     552:	2f 5f       	subi	r18, 0xFF	; 255
+     554:	3f 4f       	sbci	r19, 0xFF	; 255
+     556:	30 93 01 04 	sts	0x0401, r19
+     55a:	20 93 00 04 	sts	0x0400, r18
+     55e:	53 c0       	rjmp	.+166    	; 0x606 <_direction+0x214>
+			}
+			else{
+				//same column number
+				//we will consider it as a TODO task 
+				if(curr_y > 5){
+     560:	26 30       	cpi	r18, 0x06	; 6
+     562:	31 05       	cpc	r19, r1
+     564:	64 f0       	brlt	.+24     	; 0x57e <_direction+0x18c>
+					//x++, y--
+					next_x = curr_x + 1;
+     566:	01 96       	adiw	r24, 0x01	; 1
+     568:	90 93 ff 03 	sts	0x03FF, r25
+     56c:	80 93 fe 03 	sts	0x03FE, r24
+					next_y = curr_y - 1;
+     570:	21 50       	subi	r18, 0x01	; 1
+     572:	30 40       	sbci	r19, 0x00	; 0
+     574:	30 93 01 04 	sts	0x0401, r19
+     578:	20 93 00 04 	sts	0x0400, r18
+     57c:	44 c0       	rjmp	.+136    	; 0x606 <_direction+0x214>
+				}
+				else{
+					//x++ y++
+					next_x = curr_x + 1;
+     57e:	01 96       	adiw	r24, 0x01	; 1
+     580:	90 93 ff 03 	sts	0x03FF, r25
+     584:	80 93 fe 03 	sts	0x03FE, r24
+					next_y = curr_y + 1;
+     588:	2f 5f       	subi	r18, 0xFF	; 255
+     58a:	3f 4f       	sbci	r19, 0xFF	; 255
+     58c:	30 93 01 04 	sts	0x0401, r19
+     590:	20 93 00 04 	sts	0x0400, r18
+     594:	38 c0       	rjmp	.+112    	; 0x606 <_direction+0x214>
+				}
+			}
+
+		}
+		else if(dest_x < curr_x){//up
+     596:	28 17       	cp	r18, r24
+     598:	39 07       	cpc	r19, r25
+     59a:	74 f4       	brge	.+28     	; 0x5b8 <_direction+0x1c6>
+			//x-- y same
+			next_x = curr_x - 1;
+     59c:	01 97       	sbiw	r24, 0x01	; 1
+     59e:	90 93 ff 03 	sts	0x03FF, r25
+     5a2:	80 93 fe 03 	sts	0x03FE, r24
+			next_y = curr_y ;
+     5a6:	80 91 fc 03 	lds	r24, 0x03FC
+     5aa:	90 91 fd 03 	lds	r25, 0x03FD
+     5ae:	90 93 01 04 	sts	0x0401, r25
+     5b2:	80 93 00 04 	sts	0x0400, r24
+     5b6:	27 c0       	rjmp	.+78     	; 0x606 <_direction+0x214>
+		}
+		else{
+			//same row number
+			//row is EVEN so x increase
+			if(dest_y < curr_y){//left
+     5b8:	60 91 fa 03 	lds	r22, 0x03FA
+     5bc:	70 91 fb 03 	lds	r23, 0x03FB
+     5c0:	40 91 fc 03 	lds	r20, 0x03FC
+     5c4:	50 91 fd 03 	lds	r21, 0x03FD
+     5c8:	64 17       	cp	r22, r20
+     5ca:	75 07       	cpc	r23, r21
+     5cc:	74 f4       	brge	.+28     	; 0x5ea <_direction+0x1f8>
+				//x++ y--
+				next_x = curr_x + 1;
+     5ce:	9c 01       	movw	r18, r24
+     5d0:	2f 5f       	subi	r18, 0xFF	; 255
+     5d2:	3f 4f       	sbci	r19, 0xFF	; 255
+     5d4:	30 93 ff 03 	sts	0x03FF, r19
+     5d8:	20 93 fe 03 	sts	0x03FE, r18
+				next_y = curr_y - 1;
+     5dc:	9a 01       	movw	r18, r20
+     5de:	21 50       	subi	r18, 0x01	; 1
+     5e0:	30 40       	sbci	r19, 0x00	; 0
+     5e2:	30 93 01 04 	sts	0x0401, r19
+     5e6:	20 93 00 04 	sts	0x0400, r18
+
+			}
+			if(dest_y > curr_y){//right
+     5ea:	46 17       	cp	r20, r22
+     5ec:	57 07       	cpc	r21, r23
+     5ee:	5c f4       	brge	.+22     	; 0x606 <_direction+0x214>
+				//x++ y++
+				next_x = curr_x + 1;
+     5f0:	01 96       	adiw	r24, 0x01	; 1
+     5f2:	90 93 ff 03 	sts	0x03FF, r25
+     5f6:	80 93 fe 03 	sts	0x03FE, r24
+				next_y = curr_y + 1;
+     5fa:	4f 5f       	subi	r20, 0xFF	; 255
+     5fc:	5f 4f       	sbci	r21, 0xFF	; 255
+     5fe:	50 93 01 04 	sts	0x0401, r21
+     602:	40 93 00 04 	sts	0x0400, r20
+		}
+
+	}
+	/*************************************************************/
+	//if previous node current node and next node is known and we have to find the turn required
+	if(prev_y == next_y && prev_x == next_x){
+     606:	20 91 02 04 	lds	r18, 0x0402
+     60a:	30 91 03 04 	lds	r19, 0x0403
+     60e:	40 91 00 04 	lds	r20, 0x0400
+     612:	50 91 01 04 	lds	r21, 0x0401
+     616:	24 17       	cp	r18, r20
+     618:	35 07       	cpc	r19, r21
+     61a:	f9 f4       	brne	.+62     	; 0x65a <_direction+0x268>
+     61c:	60 91 04 04 	lds	r22, 0x0404
+     620:	70 91 05 04 	lds	r23, 0x0405
+     624:	e0 91 fe 03 	lds	r30, 0x03FE
+     628:	f0 91 ff 03 	lds	r31, 0x03FF
+     62c:	6e 17       	cp	r22, r30
+     62e:	7f 07       	cpc	r23, r31
+     630:	09 f0       	breq	.+2      	; 0x634 <_direction+0x242>
+     632:	74 c0       	rjmp	.+232    	; 0x71c <_direction+0x32a>
+		//printf("Reverse\n");
+		direction[num_direction++] = REVERSE;
+     634:	80 91 06 04 	lds	r24, 0x0406
+     638:	90 91 07 04 	lds	r25, 0x0407
+     63c:	fc 01       	movw	r30, r24
+     63e:	ee 0f       	add	r30, r30
+     640:	ff 1f       	adc	r31, r31
+     642:	e8 5f       	subi	r30, 0xF8	; 248
+     644:	fb 4f       	sbci	r31, 0xFB	; 251
+     646:	22 e0       	ldi	r18, 0x02	; 2
+     648:	30 e0       	ldi	r19, 0x00	; 0
+     64a:	31 83       	std	Z+1, r19	; 0x01
+     64c:	20 83       	st	Z, r18
+     64e:	01 96       	adiw	r24, 0x01	; 1
+     650:	90 93 07 04 	sts	0x0407, r25
+     654:	80 93 06 04 	sts	0x0406, r24
+     658:	08 95       	ret
+	}
+	else if(prev_x == next_x){
+     65a:	60 91 04 04 	lds	r22, 0x0404
+     65e:	70 91 05 04 	lds	r23, 0x0405
+     662:	e0 91 fe 03 	lds	r30, 0x03FE
+     666:	f0 91 ff 03 	lds	r31, 0x03FF
+     66a:	6e 17       	cp	r22, r30
+     66c:	7f 07       	cpc	r23, r31
+     66e:	09 f0       	breq	.+2      	; 0x672 <_direction+0x280>
+     670:	55 c0       	rjmp	.+170    	; 0x71c <_direction+0x32a>
+		if(curr_x < prev_x){
+     672:	80 91 f6 03 	lds	r24, 0x03F6
+     676:	90 91 f7 03 	lds	r25, 0x03F7
+     67a:	86 17       	cp	r24, r22
+     67c:	97 07       	cpc	r25, r23
+     67e:	3c f5       	brge	.+78     	; 0x6ce <_direction+0x2dc>
+			if(prev_y > next_y){
+     680:	42 17       	cp	r20, r18
+     682:	53 07       	cpc	r21, r19
+     684:	8c f4       	brge	.+34     	; 0x6a8 <_direction+0x2b6>
+				direction[num_direction++] = LEFT;
+     686:	80 91 06 04 	lds	r24, 0x0406
+     68a:	90 91 07 04 	lds	r25, 0x0407
+     68e:	fc 01       	movw	r30, r24
+     690:	ee 0f       	add	r30, r30
+     692:	ff 1f       	adc	r31, r31
+     694:	e8 5f       	subi	r30, 0xF8	; 248
+     696:	fb 4f       	sbci	r31, 0xFB	; 251
+     698:	11 82       	std	Z+1, r1	; 0x01
+     69a:	10 82       	st	Z, r1
+     69c:	01 96       	adiw	r24, 0x01	; 1
+     69e:	90 93 07 04 	sts	0x0407, r25
+     6a2:	80 93 06 04 	sts	0x0406, r24
+     6a6:	08 95       	ret
+				//printf("left\n");
+			}
+			else{
+				//printf("right\n");
+				direction[num_direction++] = RIGHT;
+     6a8:	80 91 06 04 	lds	r24, 0x0406
+     6ac:	90 91 07 04 	lds	r25, 0x0407
+     6b0:	fc 01       	movw	r30, r24
+     6b2:	ee 0f       	add	r30, r30
+     6b4:	ff 1f       	adc	r31, r31
+     6b6:	e8 5f       	subi	r30, 0xF8	; 248
+     6b8:	fb 4f       	sbci	r31, 0xFB	; 251
+     6ba:	21 e0       	ldi	r18, 0x01	; 1
+     6bc:	30 e0       	ldi	r19, 0x00	; 0
+     6be:	31 83       	std	Z+1, r19	; 0x01
+     6c0:	20 83       	st	Z, r18
+     6c2:	01 96       	adiw	r24, 0x01	; 1
+     6c4:	90 93 07 04 	sts	0x0407, r25
+     6c8:	80 93 06 04 	sts	0x0406, r24
+     6cc:	08 95       	ret
+			}
+		}
+		else{
+			if(prev_y < next_y){
+     6ce:	24 17       	cp	r18, r20
+     6d0:	35 07       	cpc	r19, r21
+     6d2:	8c f4       	brge	.+34     	; 0x6f6 <_direction+0x304>
+				direction[num_direction++] = LEFT;
+     6d4:	80 91 06 04 	lds	r24, 0x0406
+     6d8:	90 91 07 04 	lds	r25, 0x0407
+     6dc:	fc 01       	movw	r30, r24
+     6de:	ee 0f       	add	r30, r30
+     6e0:	ff 1f       	adc	r31, r31
+     6e2:	e8 5f       	subi	r30, 0xF8	; 248
+     6e4:	fb 4f       	sbci	r31, 0xFB	; 251
+     6e6:	11 82       	std	Z+1, r1	; 0x01
+     6e8:	10 82       	st	Z, r1
+     6ea:	01 96       	adiw	r24, 0x01	; 1
+     6ec:	90 93 07 04 	sts	0x0407, r25
+     6f0:	80 93 06 04 	sts	0x0406, r24
+     6f4:	08 95       	ret
+				//printf("left\n");
+			}
+			else{
+				//printf("right\n");
+				direction[num_direction++] = RIGHT;
+     6f6:	80 91 06 04 	lds	r24, 0x0406
+     6fa:	90 91 07 04 	lds	r25, 0x0407
+     6fe:	fc 01       	movw	r30, r24
+     700:	ee 0f       	add	r30, r30
+     702:	ff 1f       	adc	r31, r31
+     704:	e8 5f       	subi	r30, 0xF8	; 248
+     706:	fb 4f       	sbci	r31, 0xFB	; 251
+     708:	21 e0       	ldi	r18, 0x01	; 1
+     70a:	30 e0       	ldi	r19, 0x00	; 0
+     70c:	31 83       	std	Z+1, r19	; 0x01
+     70e:	20 83       	st	Z, r18
+     710:	01 96       	adiw	r24, 0x01	; 1
+     712:	90 93 07 04 	sts	0x0407, r25
+     716:	80 93 06 04 	sts	0x0406, r24
+     71a:	08 95       	ret
+			}
+
+		}
+
+	}
+	else if(prev_y == curr_y){
+     71c:	80 91 fc 03 	lds	r24, 0x03FC
+     720:	90 91 fd 03 	lds	r25, 0x03FD
+     724:	28 17       	cp	r18, r24
+     726:	39 07       	cpc	r19, r25
+     728:	09 f0       	breq	.+2      	; 0x72c <_direction+0x33a>
+     72a:	55 c0       	rjmp	.+170    	; 0x7d6 <_direction+0x3e4>
+		if(prev_x < curr_x){
+     72c:	80 91 f6 03 	lds	r24, 0x03F6
+     730:	90 91 f7 03 	lds	r25, 0x03F7
+     734:	68 17       	cp	r22, r24
+     736:	79 07       	cpc	r23, r25
+     738:	3c f5       	brge	.+78     	; 0x788 <_direction+0x396>
+			if(next_y > curr_y){
+     73a:	24 17       	cp	r18, r20
+     73c:	35 07       	cpc	r19, r21
+     73e:	8c f4       	brge	.+34     	; 0x762 <_direction+0x370>
+				//printf("left\n");
+				direction[num_direction++] = LEFT;
+     740:	80 91 06 04 	lds	r24, 0x0406
+     744:	90 91 07 04 	lds	r25, 0x0407
+     748:	fc 01       	movw	r30, r24
+     74a:	ee 0f       	add	r30, r30
+     74c:	ff 1f       	adc	r31, r31
+     74e:	e8 5f       	subi	r30, 0xF8	; 248
+     750:	fb 4f       	sbci	r31, 0xFB	; 251
+     752:	11 82       	std	Z+1, r1	; 0x01
+     754:	10 82       	st	Z, r1
+     756:	01 96       	adiw	r24, 0x01	; 1
+     758:	90 93 07 04 	sts	0x0407, r25
+     75c:	80 93 06 04 	sts	0x0406, r24
+     760:	08 95       	ret
+			}
+			else{
+				//printf("right\n");
+				direction[num_direction++] = RIGHT;
+     762:	80 91 06 04 	lds	r24, 0x0406
+     766:	90 91 07 04 	lds	r25, 0x0407
+     76a:	fc 01       	movw	r30, r24
+     76c:	ee 0f       	add	r30, r30
+     76e:	ff 1f       	adc	r31, r31
+     770:	e8 5f       	subi	r30, 0xF8	; 248
+     772:	fb 4f       	sbci	r31, 0xFB	; 251
+     774:	21 e0       	ldi	r18, 0x01	; 1
+     776:	30 e0       	ldi	r19, 0x00	; 0
+     778:	31 83       	std	Z+1, r19	; 0x01
+     77a:	20 83       	st	Z, r18
+     77c:	01 96       	adiw	r24, 0x01	; 1
+     77e:	90 93 07 04 	sts	0x0407, r25
+     782:	80 93 06 04 	sts	0x0406, r24
+     786:	08 95       	ret
+			}
+		}
+		else{
+			if(next_y < curr_y){
+     788:	42 17       	cp	r20, r18
+     78a:	53 07       	cpc	r21, r19
+     78c:	8c f4       	brge	.+34     	; 0x7b0 <_direction+0x3be>
+				//printf("left\n");
+				direction[num_direction++] = LEFT;
+     78e:	80 91 06 04 	lds	r24, 0x0406
+     792:	90 91 07 04 	lds	r25, 0x0407
+     796:	fc 01       	movw	r30, r24
+     798:	ee 0f       	add	r30, r30
+     79a:	ff 1f       	adc	r31, r31
+     79c:	e8 5f       	subi	r30, 0xF8	; 248
+     79e:	fb 4f       	sbci	r31, 0xFB	; 251
+     7a0:	11 82       	std	Z+1, r1	; 0x01
+     7a2:	10 82       	st	Z, r1
+     7a4:	01 96       	adiw	r24, 0x01	; 1
+     7a6:	90 93 07 04 	sts	0x0407, r25
+     7aa:	80 93 06 04 	sts	0x0406, r24
+     7ae:	08 95       	ret
+			}
+			else{
+				//printf("right\n");
+				direction[num_direction++] = RIGHT;
+     7b0:	80 91 06 04 	lds	r24, 0x0406
+     7b4:	90 91 07 04 	lds	r25, 0x0407
+     7b8:	fc 01       	movw	r30, r24
+     7ba:	ee 0f       	add	r30, r30
+     7bc:	ff 1f       	adc	r31, r31
+     7be:	e8 5f       	subi	r30, 0xF8	; 248
+     7c0:	fb 4f       	sbci	r31, 0xFB	; 251
+     7c2:	21 e0       	ldi	r18, 0x01	; 1
+     7c4:	30 e0       	ldi	r19, 0x00	; 0
+     7c6:	31 83       	std	Z+1, r19	; 0x01
+     7c8:	20 83       	st	Z, r18
+     7ca:	01 96       	adiw	r24, 0x01	; 1
+     7cc:	90 93 07 04 	sts	0x0407, r25
+     7d0:	80 93 06 04 	sts	0x0406, r24
+     7d4:	08 95       	ret
+			}
+
+
+		}
+	}
+	else if(curr_y == next_y){
+     7d6:	48 17       	cp	r20, r24
+     7d8:	59 07       	cpc	r21, r25
+     7da:	09 f0       	breq	.+2      	; 0x7de <_direction+0x3ec>
+     7dc:	55 c0       	rjmp	.+170    	; 0x888 <_direction+0x496>
+		if(curr_x > next_x){
+     7de:	80 91 f6 03 	lds	r24, 0x03F6
+     7e2:	90 91 f7 03 	lds	r25, 0x03F7
+     7e6:	e8 17       	cp	r30, r24
+     7e8:	f9 07       	cpc	r31, r25
+     7ea:	3c f5       	brge	.+78     	; 0x83a <_direction+0x448>
+			if(curr_y < prev_y){
+     7ec:	42 17       	cp	r20, r18
+     7ee:	53 07       	cpc	r21, r19
+     7f0:	9c f4       	brge	.+38     	; 0x818 <_direction+0x426>
+				direction[num_direction++] = RIGHT;
+     7f2:	80 91 06 04 	lds	r24, 0x0406
+     7f6:	90 91 07 04 	lds	r25, 0x0407
+     7fa:	fc 01       	movw	r30, r24
+     7fc:	ee 0f       	add	r30, r30
+     7fe:	ff 1f       	adc	r31, r31
+     800:	e8 5f       	subi	r30, 0xF8	; 248
+     802:	fb 4f       	sbci	r31, 0xFB	; 251
+     804:	21 e0       	ldi	r18, 0x01	; 1
+     806:	30 e0       	ldi	r19, 0x00	; 0
+     808:	31 83       	std	Z+1, r19	; 0x01
+     80a:	20 83       	st	Z, r18
+     80c:	01 96       	adiw	r24, 0x01	; 1
+     80e:	90 93 07 04 	sts	0x0407, r25
+     812:	80 93 06 04 	sts	0x0406, r24
+     816:	08 95       	ret
+				//printf("right\n");
+			}
+			else{
+				//printf("left\n");
+				direction[num_direction++] = LEFT;
+     818:	80 91 06 04 	lds	r24, 0x0406
+     81c:	90 91 07 04 	lds	r25, 0x0407
+     820:	fc 01       	movw	r30, r24
+     822:	ee 0f       	add	r30, r30
+     824:	ff 1f       	adc	r31, r31
+     826:	e8 5f       	subi	r30, 0xF8	; 248
+     828:	fb 4f       	sbci	r31, 0xFB	; 251
+     82a:	11 82       	std	Z+1, r1	; 0x01
+     82c:	10 82       	st	Z, r1
+     82e:	01 96       	adiw	r24, 0x01	; 1
+     830:	90 93 07 04 	sts	0x0407, r25
+     834:	80 93 06 04 	sts	0x0406, r24
+     838:	08 95       	ret
+			}
+		}
+		else{
+			if(curr_y > prev_y){
+     83a:	24 17       	cp	r18, r20
+     83c:	35 07       	cpc	r19, r21
+     83e:	9c f4       	brge	.+38     	; 0x866 <_direction+0x474>
+				//printf("right\n");
+				direction[num_direction++] = RIGHT;
+     840:	80 91 06 04 	lds	r24, 0x0406
+     844:	90 91 07 04 	lds	r25, 0x0407
+     848:	fc 01       	movw	r30, r24
+     84a:	ee 0f       	add	r30, r30
+     84c:	ff 1f       	adc	r31, r31
+     84e:	e8 5f       	subi	r30, 0xF8	; 248
+     850:	fb 4f       	sbci	r31, 0xFB	; 251
+     852:	21 e0       	ldi	r18, 0x01	; 1
+     854:	30 e0       	ldi	r19, 0x00	; 0
+     856:	31 83       	std	Z+1, r19	; 0x01
+     858:	20 83       	st	Z, r18
+     85a:	01 96       	adiw	r24, 0x01	; 1
+     85c:	90 93 07 04 	sts	0x0407, r25
+     860:	80 93 06 04 	sts	0x0406, r24
+     864:	08 95       	ret
+			}
+			else{
+				//printf("left\n");
+				direction[num_direction++] = LEFT;
+     866:	80 91 06 04 	lds	r24, 0x0406
+     86a:	90 91 07 04 	lds	r25, 0x0407
+     86e:	fc 01       	movw	r30, r24
+     870:	ee 0f       	add	r30, r30
+     872:	ff 1f       	adc	r31, r31
+     874:	e8 5f       	subi	r30, 0xF8	; 248
+     876:	fb 4f       	sbci	r31, 0xFB	; 251
+     878:	11 82       	std	Z+1, r1	; 0x01
+     87a:	10 82       	st	Z, r1
+     87c:	01 96       	adiw	r24, 0x01	; 1
+     87e:	90 93 07 04 	sts	0x0407, r25
+     882:	80 93 06 04 	sts	0x0406, r24
+     886:	08 95       	ret
+
+		}
+
+	}
+	else{
+		stop(); // extreme case when bot is lost
+     888:	0e 94 08 05 	call	0xa10	; 0xa10 <stop>
+     88c:	ff cf       	rjmp	.-2      	; 0x88c <_direction+0x49a>
+
+0000088e <get_direction>:
+*Example Call: get_direction();
+*/
+
+
+void get_direction(){
+	num_direction = 0;
+     88e:	10 92 07 04 	sts	0x0407, r1
+     892:	10 92 06 04 	sts	0x0406, r1
+	//this will get direction to the previous position of the final position
+	while(next_x != dest_x || next_y != dest_y){
+     896:	22 c0       	rjmp	.+68     	; 0x8dc <get_direction+0x4e>
+		_direction();
+     898:	0e 94 f9 01 	call	0x3f2	; 0x3f2 <_direction>
+		prev_x = curr_x;
+     89c:	80 91 f6 03 	lds	r24, 0x03F6
+     8a0:	90 91 f7 03 	lds	r25, 0x03F7
+     8a4:	90 93 05 04 	sts	0x0405, r25
+     8a8:	80 93 04 04 	sts	0x0404, r24
+		prev_y = curr_y;
+     8ac:	80 91 fc 03 	lds	r24, 0x03FC
+     8b0:	90 91 fd 03 	lds	r25, 0x03FD
+     8b4:	90 93 03 04 	sts	0x0403, r25
+     8b8:	80 93 02 04 	sts	0x0402, r24
+		curr_x = next_x;
+     8bc:	80 91 fe 03 	lds	r24, 0x03FE
+     8c0:	90 91 ff 03 	lds	r25, 0x03FF
+     8c4:	90 93 f7 03 	sts	0x03F7, r25
+     8c8:	80 93 f6 03 	sts	0x03F6, r24
+		curr_y = next_y;
+     8cc:	80 91 00 04 	lds	r24, 0x0400
+     8d0:	90 91 01 04 	lds	r25, 0x0401
+     8d4:	90 93 fd 03 	sts	0x03FD, r25
+     8d8:	80 93 fc 03 	sts	0x03FC, r24
+
+
+void get_direction(){
+	num_direction = 0;
+	//this will get direction to the previous position of the final position
+	while(next_x != dest_x || next_y != dest_y){
+     8dc:	20 91 fe 03 	lds	r18, 0x03FE
+     8e0:	30 91 ff 03 	lds	r19, 0x03FF
+     8e4:	80 91 f8 03 	lds	r24, 0x03F8
+     8e8:	90 91 f9 03 	lds	r25, 0x03F9
+     8ec:	28 17       	cp	r18, r24
+     8ee:	39 07       	cpc	r19, r25
+     8f0:	99 f6       	brne	.-90     	; 0x898 <get_direction+0xa>
+     8f2:	20 91 00 04 	lds	r18, 0x0400
+     8f6:	30 91 01 04 	lds	r19, 0x0401
+     8fa:	80 91 fa 03 	lds	r24, 0x03FA
+     8fe:	90 91 fb 03 	lds	r25, 0x03FB
+     902:	28 17       	cp	r18, r24
+     904:	39 07       	cpc	r19, r25
+     906:	41 f6       	brne	.-112    	; 0x898 <get_direction+0xa>
+		prev_y = curr_y;
+		curr_x = next_x;
+		curr_y = next_y;
+
+	}
+	dest_x = final_dest_x;
+     908:	80 91 6c 04 	lds	r24, 0x046C
+     90c:	90 91 6d 04 	lds	r25, 0x046D
+     910:	90 93 f9 03 	sts	0x03F9, r25
+     914:	80 93 f8 03 	sts	0x03F8, r24
+	dest_y = final_dest_y;
+     918:	80 91 6e 04 	lds	r24, 0x046E
+     91c:	90 91 6f 04 	lds	r25, 0x046F
+     920:	90 93 fb 03 	sts	0x03FB, r25
+     924:	80 93 fa 03 	sts	0x03FA, r24
+	//this one turn will get form previous position to final position
+	while(next_x != dest_x || next_y != dest_y){
+     928:	22 c0       	rjmp	.+68     	; 0x96e <get_direction+0xe0>
+		_direction();
+     92a:	0e 94 f9 01 	call	0x3f2	; 0x3f2 <_direction>
+		prev_x = curr_x;
+     92e:	80 91 f6 03 	lds	r24, 0x03F6
+     932:	90 91 f7 03 	lds	r25, 0x03F7
+     936:	90 93 05 04 	sts	0x0405, r25
+     93a:	80 93 04 04 	sts	0x0404, r24
+		prev_y = curr_y;
+     93e:	80 91 fc 03 	lds	r24, 0x03FC
+     942:	90 91 fd 03 	lds	r25, 0x03FD
+     946:	90 93 03 04 	sts	0x0403, r25
+     94a:	80 93 02 04 	sts	0x0402, r24
+		curr_x = next_x;
+     94e:	80 91 fe 03 	lds	r24, 0x03FE
+     952:	90 91 ff 03 	lds	r25, 0x03FF
+     956:	90 93 f7 03 	sts	0x03F7, r25
+     95a:	80 93 f6 03 	sts	0x03F6, r24
+		curr_y = next_y;
+     95e:	80 91 00 04 	lds	r24, 0x0400
+     962:	90 91 01 04 	lds	r25, 0x0401
+     966:	90 93 fd 03 	sts	0x03FD, r25
+     96a:	80 93 fc 03 	sts	0x03FC, r24
+
+	}
+	dest_x = final_dest_x;
+	dest_y = final_dest_y;
+	//this one turn will get form previous position to final position
+	while(next_x != dest_x || next_y != dest_y){
+     96e:	20 91 fe 03 	lds	r18, 0x03FE
+     972:	30 91 ff 03 	lds	r19, 0x03FF
+     976:	80 91 f8 03 	lds	r24, 0x03F8
+     97a:	90 91 f9 03 	lds	r25, 0x03F9
+     97e:	28 17       	cp	r18, r24
+     980:	39 07       	cpc	r19, r25
+     982:	99 f6       	brne	.-90     	; 0x92a <get_direction+0x9c>
+     984:	20 91 00 04 	lds	r18, 0x0400
+     988:	30 91 01 04 	lds	r19, 0x0401
+     98c:	80 91 fa 03 	lds	r24, 0x03FA
+     990:	90 91 fb 03 	lds	r25, 0x03FB
+     994:	28 17       	cp	r18, r24
+     996:	39 07       	cpc	r19, r25
+     998:	41 f6       	brne	.-112    	; 0x92a <get_direction+0x9c>
+		prev_y = curr_y;
+		curr_x = next_x;
+		curr_y = next_y;
+
+	}		
+}
+     99a:	08 95       	ret
+
+0000099c <motion_pin_config>:
+*Example Call: motion_pin_config()
+*/
+//Function to configure ports to enable robot's motion
+void motion_pin_config (void) 
+{
+ DDRA = DDRA | 0x0F;
+     99c:	81 b1       	in	r24, 0x01	; 1
+     99e:	8f 60       	ori	r24, 0x0F	; 15
+     9a0:	81 b9       	out	0x01, r24	; 1
+ PORTA = PORTA & 0xF0;
+     9a2:	82 b1       	in	r24, 0x02	; 2
+     9a4:	80 7f       	andi	r24, 0xF0	; 240
+     9a6:	82 b9       	out	0x02, r24	; 2
+ DDRL = DDRL | 0x18;   //Setting PL3 and PL4 pins as output for PWM generation
+     9a8:	ea e0       	ldi	r30, 0x0A	; 10
+     9aa:	f1 e0       	ldi	r31, 0x01	; 1
+     9ac:	80 81       	ld	r24, Z
+     9ae:	88 61       	ori	r24, 0x18	; 24
+     9b0:	80 83       	st	Z, r24
+ PORTL = PORTL | 0x18; //PL3 and PL4 pins are for velocity control using PWM.
+     9b2:	eb e0       	ldi	r30, 0x0B	; 11
+     9b4:	f1 e0       	ldi	r31, 0x01	; 1
+     9b6:	80 81       	ld	r24, Z
+     9b8:	88 61       	ori	r24, 0x18	; 24
+     9ba:	80 83       	st	Z, r24
+}
+     9bc:	08 95       	ret
+
+000009be <init_ports>:
+
+//Function to initialize ports
+void init_ports()
+{
+ motion_pin_config();
+     9be:	0e 94 ce 04 	call	0x99c	; 0x99c <motion_pin_config>
+}
+     9c2:	08 95       	ret
+
+000009c4 <timer5_init>:
+// Prescale:256
+// PWM 8bit fast, TOP=0x00FF
+// Timer Frequency:225.000Hz
+void timer5_init()
+{
+	TCCR5B = 0x00;	
+     9c4:	e1 e2       	ldi	r30, 0x21	; 33
+     9c6:	f1 e0       	ldi	r31, 0x01	; 1
+     9c8:	10 82       	st	Z, r1
+	TCNT5H = 0xFF;	
+     9ca:	8f ef       	ldi	r24, 0xFF	; 255
+     9cc:	80 93 25 01 	sts	0x0125, r24
+	TCNT5L = 0x01;	
+     9d0:	91 e0       	ldi	r25, 0x01	; 1
+     9d2:	90 93 24 01 	sts	0x0124, r25
+	OCR5AH = 0x00;	
+     9d6:	10 92 29 01 	sts	0x0129, r1
+	OCR5AL = 0xFF;	
+     9da:	80 93 28 01 	sts	0x0128, r24
+	OCR5BH = 0x00;	
+     9de:	10 92 2b 01 	sts	0x012B, r1
+	OCR5BL = 0xFF;	
+     9e2:	80 93 2a 01 	sts	0x012A, r24
+	OCR5CH = 0x00;	
+     9e6:	10 92 2d 01 	sts	0x012D, r1
+	OCR5CL = 0xFF;	
+     9ea:	80 93 2c 01 	sts	0x012C, r24
+	TCCR5A = 0xA9;	
+     9ee:	89 ea       	ldi	r24, 0xA9	; 169
+     9f0:	80 93 20 01 	sts	0x0120, r24
+	
+	TCCR5B = 0x0B;	
+     9f4:	8b e0       	ldi	r24, 0x0B	; 11
+     9f6:	80 83       	st	Z, r24
+}
+     9f8:	08 95       	ret
+
+000009fa <velocity>:
+*Example Call : velocity(150, 150);
+*/
+
+void velocity (unsigned char left_motor, unsigned char right_motor)
+{
+	OCR5AL = (unsigned char)left_motor;
+     9fa:	80 93 28 01 	sts	0x0128, r24
+	OCR5BL = (unsigned char)right_motor;
+     9fe:	60 93 2a 01 	sts	0x012A, r22
+}
+     a02:	08 95       	ret
+
+00000a04 <motion_set>:
+void motion_set (unsigned char Direction)
+{
+ unsigned char PortARestore = 0;
+
+ Direction &= 0x0F; 			
+ PortARestore = PORTA; 			
+     a04:	92 b1       	in	r25, 0x02	; 2
+ PortARestore &= 0xF0; 			
+     a06:	90 7f       	andi	r25, 0xF0	; 240
+//Function used for setting motor's direction
+void motion_set (unsigned char Direction)
+{
+ unsigned char PortARestore = 0;
+
+ Direction &= 0x0F; 			
+     a08:	8f 70       	andi	r24, 0x0F	; 15
+ PortARestore = PORTA; 			
+ PortARestore &= 0xF0; 			
+ PortARestore |= Direction; 	
+     a0a:	98 2b       	or	r25, r24
+ PORTA = PortARestore; 			
+     a0c:	92 b9       	out	0x02, r25	; 2
+}
+     a0e:	08 95       	ret
+
+00000a10 <stop>:
+}
+
+
+void stop (void)//both wheel stationary
+{
+  motion_set(0x00);
+     a10:	80 e0       	ldi	r24, 0x00	; 0
+     a12:	0e 94 02 05 	call	0xa04	; 0xa04 <motion_set>
+}
+     a16:	08 95       	ret
+
+00000a18 <line_sensor>:
+*Logic: read values from line sensor and set appropriate values in array
+*Example Call: line_sensor()
+*/
+
+void line_sensor(){
+	if(read_adc(1) > threshold){
+     a18:	81 e0       	ldi	r24, 0x01	; 1
+     a1a:	0e 94 95 00 	call	0x12a	; 0x12a <read_adc>
+     a1e:	20 91 c8 03 	lds	r18, 0x03C8
+     a22:	30 91 c9 03 	lds	r19, 0x03C9
+     a26:	28 17       	cp	r18, r24
+     a28:	39 07       	cpc	r19, r25
+     a2a:	38 f4       	brcc	.+14     	; 0xa3a <line_sensor+0x22>
+		led[0] = 1;
+     a2c:	81 e0       	ldi	r24, 0x01	; 1
+     a2e:	90 e0       	ldi	r25, 0x00	; 0
+     a30:	90 93 71 04 	sts	0x0471, r25
+     a34:	80 93 70 04 	sts	0x0470, r24
+     a38:	04 c0       	rjmp	.+8      	; 0xa42 <line_sensor+0x2a>
+		//PORTB = 0xFF;
+	}
+	else{
+		led[0] = 0;
+     a3a:	10 92 71 04 	sts	0x0471, r1
+     a3e:	10 92 70 04 	sts	0x0470, r1
+		//PORTB = 0x00;
+	}
+	if(read_adc(2) > threshold){
+     a42:	82 e0       	ldi	r24, 0x02	; 2
+     a44:	0e 94 95 00 	call	0x12a	; 0x12a <read_adc>
+     a48:	20 91 c8 03 	lds	r18, 0x03C8
+     a4c:	30 91 c9 03 	lds	r19, 0x03C9
+     a50:	28 17       	cp	r18, r24
+     a52:	39 07       	cpc	r19, r25
+     a54:	38 f4       	brcc	.+14     	; 0xa64 <line_sensor+0x4c>
+		led[1] = 1;
+     a56:	81 e0       	ldi	r24, 0x01	; 1
+     a58:	90 e0       	ldi	r25, 0x00	; 0
+     a5a:	90 93 73 04 	sts	0x0473, r25
+     a5e:	80 93 72 04 	sts	0x0472, r24
+     a62:	04 c0       	rjmp	.+8      	; 0xa6c <line_sensor+0x54>
+		//PORTB = 0xFF;
+	}
+	else{
+		led[1] = 0;
+     a64:	10 92 73 04 	sts	0x0473, r1
+     a68:	10 92 72 04 	sts	0x0472, r1
+		//PORTB = 0x00;
+	}
+	if(read_adc(3) > threshold){
+     a6c:	83 e0       	ldi	r24, 0x03	; 3
+     a6e:	0e 94 95 00 	call	0x12a	; 0x12a <read_adc>
+     a72:	20 91 c8 03 	lds	r18, 0x03C8
+     a76:	30 91 c9 03 	lds	r19, 0x03C9
+     a7a:	28 17       	cp	r18, r24
+     a7c:	39 07       	cpc	r19, r25
+     a7e:	38 f4       	brcc	.+14     	; 0xa8e <line_sensor+0x76>
+		led[2] = 1;
+     a80:	81 e0       	ldi	r24, 0x01	; 1
+     a82:	90 e0       	ldi	r25, 0x00	; 0
+     a84:	90 93 75 04 	sts	0x0475, r25
+     a88:	80 93 74 04 	sts	0x0474, r24
+     a8c:	08 95       	ret
+		//PORTB = 0xFF;
+	}
+	else{
+		led[2] = 0;
+     a8e:	10 92 75 04 	sts	0x0475, r1
+     a92:	10 92 74 04 	sts	0x0474, r1
+     a96:	08 95       	ret
+
+00000a98 <forward>:
+*Logic: to move the bot in Forward direction
+*Example Call: forward() 
+*/
+void forward (void) //both wheels forward
+{
+  motion_set(0x06);
+     a98:	86 e0       	ldi	r24, 0x06	; 6
+     a9a:	0e 94 02 05 	call	0xa04	; 0xa04 <motion_set>
+}
+     a9e:	08 95       	ret
+
+00000aa0 <back>:
+*Logic: to move bot in backward direction
+*Example Call: back()
+*/
+void back (void) //both wheels backward
+{
+  motion_set(0x09);
+     aa0:	89 e0       	ldi	r24, 0x09	; 9
+     aa2:	0e 94 02 05 	call	0xa04	; 0xa04 <motion_set>
+}
+     aa6:	08 95       	ret
+
+00000aa8 <left>:
+*Logic: to move the bot in left direction
+*Example Call: left()
+*/
+void left (void) //Left wheel backward, Right wheel forward
+{
+	motion_set(0x0A);
+     aa8:	8a e0       	ldi	r24, 0x0A	; 10
+     aaa:	0e 94 02 05 	call	0xa04	; 0xa04 <motion_set>
+}
+     aae:	08 95       	ret
+
+00000ab0 <right>:
+*Logic: to move the bot in right direction
+*Example Call: right()
+*/
+void right (void) //Left wheel forward, Right wheel backward
+{
+	motion_set(0x05);
+     ab0:	85 e0       	ldi	r24, 0x05	; 5
+     ab2:	0e 94 02 05 	call	0xa04	; 0xa04 <motion_set>
+  
+}
+     ab6:	08 95       	ret
+
+00000ab8 <soft_left>:
+*Logic: to move the bot in left direction with one wheel moving
+*Example Call: soft_left()
+*/
+void soft_left (void) //Left wheel stationary, Right wheel forward
+{
+	motion_set(0x04);
+     ab8:	84 e0       	ldi	r24, 0x04	; 4
+     aba:	0e 94 02 05 	call	0xa04	; 0xa04 <motion_set>
+}
+     abe:	08 95       	ret
+
+00000ac0 <soft_right>:
+*Logic: To move the bot in right direction with one wheel moving
+*Example Call:
+*/
+void soft_right (void) //Left wheel forward, Right wheel is stationary
+{
+ motion_set(0x02);
+     ac0:	82 e0       	ldi	r24, 0x02	; 2
+     ac2:	0e 94 02 05 	call	0xa04	; 0xa04 <motion_set>
+}
+     ac6:	08 95       	ret
+
+00000ac8 <init_devices>:
+}
+/**************************************************************************************************/
+
+void init_devices (void) //use this function to initialize all devices
+{
+ cli(); //disable all interrupts
+     ac8:	f8 94       	cli
+ init_ports();
+     aca:	0e 94 df 04 	call	0x9be	; 0x9be <init_ports>
+ timer5_init();
+     ace:	0e 94 e2 04 	call	0x9c4	; 0x9c4 <timer5_init>
+ sei(); //re-enable interrupts
+     ad2:	78 94       	sei
+}
+     ad4:	08 95       	ret
+
+00000ad6 <new_left>:
+*Output: none
+*Logic: left turn of robot
+*Example Call: new_left()
+*/
+
+void new_left(){
+     ad6:	cf 93       	push	r28
+     ad8:	df 93       	push	r29
+	forward();
+     ada:	0e 94 4c 05 	call	0xa98	; 0xa98 <forward>
+	velocity(122, 122);
+     ade:	8a e7       	ldi	r24, 0x7A	; 122
+     ae0:	6a e7       	ldi	r22, 0x7A	; 122
+     ae2:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     ae6:	8f ef       	ldi	r24, 0xFF	; 255
+     ae8:	9f ef       	ldi	r25, 0xFF	; 255
+     aea:	a8 e0       	ldi	r26, 0x08	; 8
+     aec:	81 50       	subi	r24, 0x01	; 1
+     aee:	90 40       	sbci	r25, 0x00	; 0
+     af0:	a0 40       	sbci	r26, 0x00	; 0
+     af2:	e1 f7       	brne	.-8      	; 0xaec <new_left+0x16>
+     af4:	00 c0       	rjmp	.+0      	; 0xaf6 <new_left+0x20>
+     af6:	00 00       	nop
+	_delay_ms(200);
+	velocity(110, 110);
+     af8:	8e e6       	ldi	r24, 0x6E	; 110
+     afa:	6e e6       	ldi	r22, 0x6E	; 110
+     afc:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+	
+	left();
+     b00:	0e 94 54 05 	call	0xaa8	; 0xaa8 <left>
+	line_sensor();
+     b04:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	//turn the bot until it reaches next line
+	while(led[0] != 2){
+     b08:	80 91 70 04 	lds	r24, 0x0470
+     b0c:	90 91 71 04 	lds	r25, 0x0471
+     b10:	82 30       	cpi	r24, 0x02	; 2
+     b12:	91 05       	cpc	r25, r1
+     b14:	49 f0       	breq	.+18     	; 0xb28 <new_left+0x52>
+     b16:	c0 e7       	ldi	r28, 0x70	; 112
+     b18:	d4 e0       	ldi	r29, 0x04	; 4
+		line_sensor();
+     b1a:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	velocity(110, 110);
+	
+	left();
+	line_sensor();
+	//turn the bot until it reaches next line
+	while(led[0] != 2){
+     b1e:	88 81       	ld	r24, Y
+     b20:	99 81       	ldd	r25, Y+1	; 0x01
+     b22:	82 30       	cpi	r24, 0x02	; 2
+     b24:	91 05       	cpc	r25, r1
+     b26:	c9 f7       	brne	.-14     	; 0xb1a <new_left+0x44>
+		line_sensor();
+	}	
+}
+     b28:	df 91       	pop	r29
+     b2a:	cf 91       	pop	r28
+     b2c:	08 95       	ret
+
+00000b2e <new_right>:
+*Output: none
+*Logic: right turn of robot
+*Example Call: new_right()
+*/
+
+void new_right(){
+     b2e:	cf 93       	push	r28
+     b30:	df 93       	push	r29
+	forward();
+     b32:	0e 94 4c 05 	call	0xa98	; 0xa98 <forward>
+	velocity(122, 122);
+     b36:	8a e7       	ldi	r24, 0x7A	; 122
+     b38:	6a e7       	ldi	r22, 0x7A	; 122
+     b3a:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+     b3e:	8f ef       	ldi	r24, 0xFF	; 255
+     b40:	9f ef       	ldi	r25, 0xFF	; 255
+     b42:	a8 e0       	ldi	r26, 0x08	; 8
+     b44:	81 50       	subi	r24, 0x01	; 1
+     b46:	90 40       	sbci	r25, 0x00	; 0
+     b48:	a0 40       	sbci	r26, 0x00	; 0
+     b4a:	e1 f7       	brne	.-8      	; 0xb44 <new_right+0x16>
+     b4c:	00 c0       	rjmp	.+0      	; 0xb4e <new_right+0x20>
+     b4e:	00 00       	nop
+	_delay_ms(200);
+	velocity(110, 110);
+     b50:	8e e6       	ldi	r24, 0x6E	; 110
+     b52:	6e e6       	ldi	r22, 0x6E	; 110
+     b54:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+	
+	right();
+     b58:	0e 94 58 05 	call	0xab0	; 0xab0 <right>
+	line_sensor();
+     b5c:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	//turn the bot until it reaches next line
+	while(led[2] != 0){
+     b60:	80 91 74 04 	lds	r24, 0x0474
+     b64:	90 91 75 04 	lds	r25, 0x0475
+     b68:	00 97       	sbiw	r24, 0x00	; 0
+     b6a:	41 f0       	breq	.+16     	; 0xb7c <new_right+0x4e>
+     b6c:	c4 e7       	ldi	r28, 0x74	; 116
+     b6e:	d4 e0       	ldi	r29, 0x04	; 4
+		line_sensor();
+     b70:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	velocity(110, 110);
+	
+	right();
+	line_sensor();
+	//turn the bot until it reaches next line
+	while(led[2] != 0){
+     b74:	88 81       	ld	r24, Y
+     b76:	99 81       	ldd	r25, Y+1	; 0x01
+     b78:	00 97       	sbiw	r24, 0x00	; 0
+     b7a:	d1 f7       	brne	.-12     	; 0xb70 <new_right+0x42>
+		line_sensor();
+	}	
+}
+     b7c:	df 91       	pop	r29
+     b7e:	cf 91       	pop	r28
+     b80:	08 95       	ret
+
+00000b82 <reverse>:
+*Input: none
+*Output: none
+*Logic: To take a reverse turn. The bot should pass through 2 lines on the arena to get to the final line 
+*Example Call: reverse()
+*/
+void reverse(){
+     b82:	cf 93       	push	r28
+     b84:	df 93       	push	r29
+	forward();
+     b86:	0e 94 4c 05 	call	0xa98	; 0xa98 <forward>
+	velocity(122, 122);
+     b8a:	8a e7       	ldi	r24, 0x7A	; 122
+     b8c:	6a e7       	ldi	r22, 0x7A	; 122
+     b8e:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+     b92:	8f ef       	ldi	r24, 0xFF	; 255
+     b94:	9f ef       	ldi	r25, 0xFF	; 255
+     b96:	a8 e0       	ldi	r26, 0x08	; 8
+     b98:	81 50       	subi	r24, 0x01	; 1
+     b9a:	90 40       	sbci	r25, 0x00	; 0
+     b9c:	a0 40       	sbci	r26, 0x00	; 0
+     b9e:	e1 f7       	brne	.-8      	; 0xb98 <reverse+0x16>
+     ba0:	00 c0       	rjmp	.+0      	; 0xba2 <reverse+0x20>
+     ba2:	00 00       	nop
+	_delay_ms(200);
+	velocity(110, 110);
+     ba4:	8e e6       	ldi	r24, 0x6E	; 110
+     ba6:	6e e6       	ldi	r22, 0x6E	; 110
+     ba8:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+	
+	right();
+     bac:	0e 94 58 05 	call	0xab0	; 0xab0 <right>
+	line_sensor();
+     bb0:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	while(led[1] != 1){
+     bb4:	80 91 72 04 	lds	r24, 0x0472
+     bb8:	90 91 73 04 	lds	r25, 0x0473
+     bbc:	81 30       	cpi	r24, 0x01	; 1
+     bbe:	91 05       	cpc	r25, r1
+     bc0:	49 f0       	breq	.+18     	; 0xbd4 <reverse+0x52>
+     bc2:	c2 e7       	ldi	r28, 0x72	; 114
+     bc4:	d4 e0       	ldi	r29, 0x04	; 4
+		line_sensor();
+     bc6:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	_delay_ms(200);
+	velocity(110, 110);
+	
+	right();
+	line_sensor();
+	while(led[1] != 1){
+     bca:	88 81       	ld	r24, Y
+     bcc:	99 81       	ldd	r25, Y+1	; 0x01
+     bce:	81 30       	cpi	r24, 0x01	; 1
+     bd0:	91 05       	cpc	r25, r1
+     bd2:	c9 f7       	brne	.-14     	; 0xbc6 <reverse+0x44>
+		line_sensor();
+	}
+	while(led[1] == 1){
+     bd4:	c2 e7       	ldi	r28, 0x72	; 114
+     bd6:	d4 e0       	ldi	r29, 0x04	; 4
+		line_sensor();
+     bd8:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	right();
+	line_sensor();
+	while(led[1] != 1){
+		line_sensor();
+	}
+	while(led[1] == 1){
+     bdc:	88 81       	ld	r24, Y
+     bde:	99 81       	ldd	r25, Y+1	; 0x01
+     be0:	81 30       	cpi	r24, 0x01	; 1
+     be2:	91 05       	cpc	r25, r1
+     be4:	c9 f3       	breq	.-14     	; 0xbd8 <reverse+0x56>
+		line_sensor();
+	}
+	while(led[1] != 1){
+     be6:	c2 e7       	ldi	r28, 0x72	; 114
+     be8:	d4 e0       	ldi	r29, 0x04	; 4
+		line_sensor();
+     bea:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+		line_sensor();
+	}
+	while(led[1] == 1){
+		line_sensor();
+	}
+	while(led[1] != 1){
+     bee:	88 81       	ld	r24, Y
+     bf0:	99 81       	ldd	r25, Y+1	; 0x01
+     bf2:	81 30       	cpi	r24, 0x01	; 1
+     bf4:	91 05       	cpc	r25, r1
+     bf6:	c9 f7       	brne	.-14     	; 0xbea <reverse+0x68>
+		line_sensor();
+	}
+	
+}
+     bf8:	df 91       	pop	r29
+     bfa:	cf 91       	pop	r28
+     bfc:	08 95       	ret
+
+00000bfe <buzzer_on>:
+*Output: none
+*Logic:Turns ON the buzzer
+*Example Call:
+*/
+void buzzer_on(){
+	PORTB = 0xFF;
+     bfe:	8f ef       	ldi	r24, 0xFF	; 255
+     c00:	85 b9       	out	0x05, r24	; 5
+}
+     c02:	08 95       	ret
+
+00000c04 <buzzer_of>:
+*Output: none
+*Logic: Turns OFF the buzzer
+*Example Call: buzzer_of()
+*/
+void buzzer_of(){
+	PORTB = 0x00;
+     c04:	15 b8       	out	0x05, r1	; 5
+}
+     c06:	08 95       	ret
+
+00000c08 <magnet_on>:
+*Output: none
+*Logic: Turns ON the magnet
+*Example Call:
+*/
+void magnet_on(){
+	PORTK = 0xFF;
+     c08:	8f ef       	ldi	r24, 0xFF	; 255
+     c0a:	80 93 08 01 	sts	0x0108, r24
+}
+     c0e:	08 95       	ret
+
+00000c10 <magnet_of>:
+*Output: none
+*Logic: turns OFF the magnet
+*Example Call: magnet_of()
+*/
+void magnet_of(){
+	PORTK = 0x00;
+     c10:	10 92 08 01 	sts	0x0108, r1
+}
+     c14:	08 95       	ret
+
+00000c16 <pickup>:
+*Output: none
+*Logic: This function is called when the bot reaches the node and it have to pickup or drop the magnetic pebbles
+*Example Call:pickup()
+*/
+
+void pickup(){
+     c16:	ef 92       	push	r14
+     c18:	ff 92       	push	r15
+     c1a:	0f 93       	push	r16
+     c1c:	1f 93       	push	r17
+     c1e:	cf 93       	push	r28
+     c20:	df 93       	push	r29
+	//forward the bot for some distance
+	forward();
+     c22:	0e 94 4c 05 	call	0xa98	; 0xa98 <forward>
+	velocity(122, 122);
+     c26:	8a e7       	ldi	r24, 0x7A	; 122
+     c28:	6a e7       	ldi	r22, 0x7A	; 122
+     c2a:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+     c2e:	8f ef       	ldi	r24, 0xFF	; 255
+     c30:	9f eb       	ldi	r25, 0xBF	; 191
+     c32:	af e0       	ldi	r26, 0x0F	; 15
+     c34:	81 50       	subi	r24, 0x01	; 1
+     c36:	90 40       	sbci	r25, 0x00	; 0
+     c38:	a0 40       	sbci	r26, 0x00	; 0
+     c3a:	e1 f7       	brne	.-8      	; 0xc34 <pickup+0x1e>
+     c3c:	00 c0       	rjmp	.+0      	; 0xc3e <pickup+0x28>
+     c3e:	00 00       	nop
+	_delay_ms(350);
+	//stop for the bot to complete action
+	stop();
+     c40:	0e 94 08 05 	call	0xa10	; 0xa10 <stop>
+     c44:	8f ef       	ldi	r24, 0xFF	; 255
+     c46:	9f ef       	ldi	r25, 0xFF	; 255
+     c48:	a9 e5       	ldi	r26, 0x59	; 89
+     c4a:	81 50       	subi	r24, 0x01	; 1
+     c4c:	90 40       	sbci	r25, 0x00	; 0
+     c4e:	a0 40       	sbci	r26, 0x00	; 0
+     c50:	e1 f7       	brne	.-8      	; 0xc4a <pickup+0x34>
+     c52:	00 c0       	rjmp	.+0      	; 0xc54 <pickup+0x3e>
+     c54:	00 00       	nop
+	_delay_ms(2000);
+	back();
+     c56:	0e 94 50 05 	call	0xaa0	; 0xaa0 <back>
+	velocity(133, 120);
+     c5a:	85 e8       	ldi	r24, 0x85	; 133
+     c5c:	68 e7       	ldi	r22, 0x78	; 120
+     c5e:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+	line_sensor();
+     c62:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	if(flag_magnet == 0){
+     c66:	80 91 76 04 	lds	r24, 0x0476
+     c6a:	90 91 77 04 	lds	r25, 0x0477
+     c6e:	00 97       	sbiw	r24, 0x00	; 0
+     c70:	49 f4       	brne	.+18     	; 0xc84 <pickup+0x6e>
+		magnet_on();
+     c72:	0e 94 04 06 	call	0xc08	; 0xc08 <magnet_on>
+		flag_magnet = 1;
+     c76:	81 e0       	ldi	r24, 0x01	; 1
+     c78:	90 e0       	ldi	r25, 0x00	; 0
+     c7a:	90 93 77 04 	sts	0x0477, r25
+     c7e:	80 93 76 04 	sts	0x0476, r24
+     c82:	06 c0       	rjmp	.+12     	; 0xc90 <pickup+0x7a>
+	}
+	else{
+		magnet_of();
+     c84:	0e 94 08 06 	call	0xc10	; 0xc10 <magnet_of>
+		flag_magnet = 0;
+     c88:	10 92 77 04 	sts	0x0477, r1
+     c8c:	10 92 76 04 	sts	0x0476, r1
+	}
+	//bot will come back until it reaches the line
+	while(1){
+		if(led[0] == 0 && led[1]== 1 && led[2] == 0){
+     c90:	c0 e7       	ldi	r28, 0x70	; 112
+     c92:	d4 e0       	ldi	r29, 0x04	; 4
+     c94:	02 e7       	ldi	r16, 0x72	; 114
+     c96:	14 e0       	ldi	r17, 0x04	; 4
+     c98:	0f 2e       	mov	r0, r31
+     c9a:	f4 e7       	ldi	r31, 0x74	; 116
+     c9c:	ef 2e       	mov	r14, r31
+     c9e:	f4 e0       	ldi	r31, 0x04	; 4
+     ca0:	ff 2e       	mov	r15, r31
+     ca2:	f0 2d       	mov	r31, r0
+     ca4:	88 81       	ld	r24, Y
+     ca6:	99 81       	ldd	r25, Y+1	; 0x01
+     ca8:	00 97       	sbiw	r24, 0x00	; 0
+     caa:	61 f4       	brne	.+24     	; 0xcc4 <pickup+0xae>
+     cac:	d8 01       	movw	r26, r16
+     cae:	8d 91       	ld	r24, X+
+     cb0:	9c 91       	ld	r25, X
+     cb2:	11 97       	sbiw	r26, 0x01	; 1
+     cb4:	81 30       	cpi	r24, 0x01	; 1
+     cb6:	91 05       	cpc	r25, r1
+     cb8:	29 f4       	brne	.+10     	; 0xcc4 <pickup+0xae>
+     cba:	f7 01       	movw	r30, r14
+     cbc:	80 81       	ld	r24, Z
+     cbe:	91 81       	ldd	r25, Z+1	; 0x01
+     cc0:	00 97       	sbiw	r24, 0x00	; 0
+     cc2:	19 f0       	breq	.+6      	; 0xcca <pickup+0xb4>
+			break;
+		}
+		line_sensor();
+     cc4:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+	}
+     cc8:	ed cf       	rjmp	.-38     	; 0xca4 <pickup+0x8e>
+	
+	back();
+     cca:	0e 94 50 05 	call	0xaa0	; 0xaa0 <back>
+	velocity(133, 120);
+     cce:	85 e8       	ldi	r24, 0x85	; 133
+     cd0:	68 e7       	ldi	r22, 0x78	; 120
+     cd2:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+     cd6:	8f ef       	ldi	r24, 0xFF	; 255
+     cd8:	9f e3       	ldi	r25, 0x3F	; 63
+     cda:	a2 e0       	ldi	r26, 0x02	; 2
+     cdc:	81 50       	subi	r24, 0x01	; 1
+     cde:	90 40       	sbci	r25, 0x00	; 0
+     ce0:	a0 40       	sbci	r26, 0x00	; 0
+     ce2:	e1 f7       	brne	.-8      	; 0xcdc <pickup+0xc6>
+     ce4:	00 c0       	rjmp	.+0      	; 0xce6 <pickup+0xd0>
+     ce6:	00 00       	nop
+	_delay_ms(50);
+	
+}
+     ce8:	df 91       	pop	r29
+     cea:	cf 91       	pop	r28
+     cec:	1f 91       	pop	r17
+     cee:	0f 91       	pop	r16
+     cf0:	ff 90       	pop	r15
+     cf2:	ef 90       	pop	r14
+     cf4:	08 95       	ret
+
+00000cf6 <get_destination>:
+*Example Call: get_direction()
+*/
+
+/*********************************************************************************************************/
+
+get_destination(){
+     cf6:	8f 92       	push	r8
+     cf8:	9f 92       	push	r9
+     cfa:	af 92       	push	r10
+     cfc:	bf 92       	push	r11
+     cfe:	cf 92       	push	r12
+     d00:	df 92       	push	r13
+     d02:	ef 92       	push	r14
+     d04:	ff 92       	push	r15
+     d06:	0f 93       	push	r16
+     d08:	1f 93       	push	r17
+     d0a:	cf 93       	push	r28
+     d0c:	df 93       	push	r29
+     d0e:	cd b7       	in	r28, 0x3d	; 61
+     d10:	de b7       	in	r29, 0x3e	; 62
+     d12:	28 97       	sbiw	r28, 0x08	; 8
+     d14:	0f b6       	in	r0, 0x3f	; 63
+     d16:	f8 94       	cli
+     d18:	de bf       	out	0x3e, r29	; 62
+     d1a:	0f be       	out	0x3f, r0	; 63
+     d1c:	cd bf       	out	0x3d, r28	; 61
+	int i,k,o,n;
+	int destination_positions[4];
+	o = orientation[positions_done] - 1;
+     d1e:	40 91 78 04 	lds	r20, 0x0478
+     d22:	50 91 79 04 	lds	r21, 0x0479
+     d26:	fa 01       	movw	r30, r20
+     d28:	ee 0f       	add	r30, r30
+     d2a:	ff 1f       	adc	r31, r31
+     d2c:	ee 51       	subi	r30, 0x1E	; 30
+     d2e:	fc 4f       	sbci	r31, 0xFC	; 252
+     d30:	80 81       	ld	r24, Z
+     d32:	91 81       	ldd	r25, Z+1	; 0x01
+	n = 0;
+	if(positions_done == num_positions){
+     d34:	20 91 cc 03 	lds	r18, 0x03CC
+     d38:	30 91 cd 03 	lds	r19, 0x03CD
+     d3c:	42 17       	cp	r20, r18
+     d3e:	53 07       	cpc	r21, r19
+     d40:	99 f4       	brne	.+38     	; 0xd68 <get_destination+0x72>
+		//end of all positions
+		stop();
+     d42:	0e 94 08 05 	call	0xa10	; 0xa10 <stop>
+		uart_tx('@');
+     d46:	80 e4       	ldi	r24, 0x40	; 64
+     d48:	0e 94 92 01 	call	0x324	; 0x324 <uart_tx>
+		while(1){
+			buzzer_on();
+     d4c:	0e 94 ff 05 	call	0xbfe	; 0xbfe <buzzer_on>
+     d50:	8f ef       	ldi	r24, 0xFF	; 255
+     d52:	9f ef       	ldi	r25, 0xFF	; 255
+     d54:	a0 ee       	ldi	r26, 0xE0	; 224
+     d56:	81 50       	subi	r24, 0x01	; 1
+     d58:	90 40       	sbci	r25, 0x00	; 0
+     d5a:	a0 40       	sbci	r26, 0x00	; 0
+     d5c:	e1 f7       	brne	.-8      	; 0xd56 <get_destination+0x60>
+     d5e:	00 c0       	rjmp	.+0      	; 0xd60 <get_destination+0x6a>
+     d60:	00 00       	nop
+			_delay_ms(5000);
+			buzzer_of();
+     d62:	0e 94 02 06 	call	0xc04	; 0xc04 <buzzer_of>
+     d66:	ff cf       	rjmp	.-2      	; 0xd66 <get_destination+0x70>
+/*********************************************************************************************************/
+
+get_destination(){
+	int i,k,o,n;
+	int destination_positions[4];
+	o = orientation[positions_done] - 1;
+     d68:	8c 01       	movw	r16, r24
+     d6a:	01 50       	subi	r16, 0x01	; 1
+     d6c:	10 40       	sbci	r17, 0x00	; 0
+			buzzer_of();
+			while(1);
+		}
+	}
+	/* To read The positions from array*/
+	for(k = o * 4; k < (o * 4 + 4); k++){
+     d6e:	b8 01       	movw	r22, r16
+     d70:	66 0f       	add	r22, r22
+     d72:	77 1f       	adc	r23, r23
+     d74:	66 0f       	add	r22, r22
+     d76:	77 1f       	adc	r23, r23
+     d78:	7c 01       	movw	r14, r24
+     d7a:	ee 0c       	add	r14, r14
+     d7c:	ff 1c       	adc	r15, r15
+     d7e:	ee 0c       	add	r14, r14
+     d80:	ff 1c       	adc	r15, r15
+     d82:	6e 15       	cp	r22, r14
+     d84:	7f 05       	cpc	r23, r15
+     d86:	3c f5       	brge	.+78     	; 0xdd6 <get_destination+0xe0>
+
+		destination_positions[n++] = arr[position[positions_done]][k];
+     d88:	fa 01       	movw	r30, r20
+     d8a:	ee 0f       	add	r30, r30
+     d8c:	ff 1f       	adc	r31, r31
+     d8e:	e2 53       	subi	r30, 0x32	; 50
+     d90:	fc 4f       	sbci	r31, 0xFC	; 252
+*Example Call: get_direction()
+*/
+
+/*********************************************************************************************************/
+
+get_destination(){
+     d92:	80 81       	ld	r24, Z
+     d94:	91 81       	ldd	r25, Z+1	; 0x01
+     d96:	9c 01       	movw	r18, r24
+     d98:	22 0f       	add	r18, r18
+     d9a:	33 1f       	adc	r19, r19
+     d9c:	82 0f       	add	r24, r18
+     d9e:	93 1f       	adc	r25, r19
+     da0:	dc 01       	movw	r26, r24
+     da2:	aa 0f       	add	r26, r26
+     da4:	bb 1f       	adc	r27, r27
+     da6:	aa 0f       	add	r26, r26
+     da8:	bb 1f       	adc	r27, r27
+     daa:	a6 0f       	add	r26, r22
+     dac:	b7 1f       	adc	r27, r23
+     dae:	aa 0f       	add	r26, r26
+     db0:	bb 1f       	adc	r27, r27
+     db2:	a0 50       	subi	r26, 0x00	; 0
+     db4:	be 4f       	sbci	r27, 0xFE	; 254
+			buzzer_of();
+			while(1);
+		}
+	}
+	/* To read The positions from array*/
+	for(k = o * 4; k < (o * 4 + 4); k++){
+     db6:	fe 01       	movw	r30, r28
+     db8:	31 96       	adiw	r30, 0x01	; 1
+*Example Call: get_direction()
+*/
+
+/*********************************************************************************************************/
+
+get_destination(){
+     dba:	c7 01       	movw	r24, r14
+     dbc:	86 1b       	sub	r24, r22
+     dbe:	97 0b       	sbc	r25, r23
+     dc0:	88 0f       	add	r24, r24
+     dc2:	99 1f       	adc	r25, r25
+     dc4:	8e 0f       	add	r24, r30
+     dc6:	9f 1f       	adc	r25, r31
+		}
+	}
+	/* To read The positions from array*/
+	for(k = o * 4; k < (o * 4 + 4); k++){
+
+		destination_positions[n++] = arr[position[positions_done]][k];
+     dc8:	2d 91       	ld	r18, X+
+     dca:	3d 91       	ld	r19, X+
+     dcc:	21 93       	st	Z+, r18
+     dce:	31 93       	st	Z+, r19
+			buzzer_of();
+			while(1);
+		}
+	}
+	/* To read The positions from array*/
+	for(k = o * 4; k < (o * 4 + 4); k++){
+     dd0:	e8 17       	cp	r30, r24
+     dd2:	f9 07       	cpc	r31, r25
+     dd4:	c9 f7       	brne	.-14     	; 0xdc8 <get_destination+0xd2>
+
+		destination_positions[n++] = arr[position[positions_done]][k];
+		
+	}
+	positions_done++;
+     dd6:	4f 5f       	subi	r20, 0xFF	; 255
+     dd8:	5f 4f       	sbci	r21, 0xFF	; 255
+     dda:	50 93 79 04 	sts	0x0479, r21
+     dde:	40 93 78 04 	sts	0x0478, r20
+	/*to find distance from current position to 2 destination positions by distance formula and the dessitnation will be the smaller*/
+	int sq1, sq2;
+	sq1 = ((destination_positions[0] - curr_x) * (destination_positions[0] - curr_x)) + ((destination_positions[1] - curr_y) * (destination_positions[1] - curr_y));
+     de2:	c9 80       	ldd	r12, Y+1	; 0x01
+     de4:	da 80       	ldd	r13, Y+2	; 0x02
+     de6:	80 91 f6 03 	lds	r24, 0x03F6
+     dea:	90 91 f7 03 	lds	r25, 0x03F7
+     dee:	a6 01       	movw	r20, r12
+     df0:	48 1b       	sub	r20, r24
+     df2:	59 0b       	sbc	r21, r25
+     df4:	ab 80       	ldd	r10, Y+3	; 0x03
+     df6:	bc 80       	ldd	r11, Y+4	; 0x04
+     df8:	20 91 fc 03 	lds	r18, 0x03FC
+     dfc:	30 91 fd 03 	lds	r19, 0x03FD
+     e00:	b5 01       	movw	r22, r10
+     e02:	62 1b       	sub	r22, r18
+     e04:	73 0b       	sbc	r23, r19
+	sq2 = ((destination_positions[2] - curr_x) * (destination_positions[2] - curr_x)) + ((destination_positions[3] - curr_y) * (destination_positions[3] - curr_y));
+     e06:	ad 81       	ldd	r26, Y+5	; 0x05
+     e08:	be 81       	ldd	r27, Y+6	; 0x06
+     e0a:	fd 01       	movw	r30, r26
+     e0c:	e8 1b       	sub	r30, r24
+     e0e:	f9 0b       	sbc	r31, r25
+     e10:	ef 80       	ldd	r14, Y+7	; 0x07
+     e12:	f8 84       	ldd	r15, Y+8	; 0x08
+     e14:	c7 01       	movw	r24, r14
+     e16:	82 1b       	sub	r24, r18
+     e18:	93 0b       	sbc	r25, r19
+     e1a:	9c 01       	movw	r18, r24
+		
+	}
+	positions_done++;
+	/*to find distance from current position to 2 destination positions by distance formula and the dessitnation will be the smaller*/
+	int sq1, sq2;
+	sq1 = ((destination_positions[0] - curr_x) * (destination_positions[0] - curr_x)) + ((destination_positions[1] - curr_y) * (destination_positions[1] - curr_y));
+     e1c:	44 9f       	mul	r20, r20
+     e1e:	40 01       	movw	r8, r0
+     e20:	45 9f       	mul	r20, r21
+     e22:	90 0c       	add	r9, r0
+     e24:	54 9f       	mul	r21, r20
+     e26:	90 0c       	add	r9, r0
+     e28:	11 24       	eor	r1, r1
+     e2a:	66 9f       	mul	r22, r22
+     e2c:	c0 01       	movw	r24, r0
+     e2e:	67 9f       	mul	r22, r23
+     e30:	90 0d       	add	r25, r0
+     e32:	76 9f       	mul	r23, r22
+     e34:	90 0d       	add	r25, r0
+     e36:	11 24       	eor	r1, r1
+     e38:	88 0e       	add	r8, r24
+     e3a:	99 1e       	adc	r9, r25
+	sq2 = ((destination_positions[2] - curr_x) * (destination_positions[2] - curr_x)) + ((destination_positions[3] - curr_y) * (destination_positions[3] - curr_y));
+     e3c:	ee 9f       	mul	r30, r30
+     e3e:	a0 01       	movw	r20, r0
+     e40:	ef 9f       	mul	r30, r31
+     e42:	50 0d       	add	r21, r0
+     e44:	fe 9f       	mul	r31, r30
+     e46:	50 0d       	add	r21, r0
+     e48:	11 24       	eor	r1, r1
+     e4a:	22 9f       	mul	r18, r18
+     e4c:	c0 01       	movw	r24, r0
+     e4e:	23 9f       	mul	r18, r19
+     e50:	90 0d       	add	r25, r0
+     e52:	32 9f       	mul	r19, r18
+     e54:	90 0d       	add	r25, r0
+     e56:	11 24       	eor	r1, r1
+     e58:	84 0f       	add	r24, r20
+     e5a:	95 1f       	adc	r25, r21
+	
+	if(sq1 > sq2){
+     e5c:	88 15       	cp	r24, r8
+     e5e:	99 05       	cpc	r25, r9
+     e60:	4c f4       	brge	.+18     	; 0xe74 <get_destination+0x17e>
+		dest_x = destination_positions[2];
+     e62:	b0 93 f9 03 	sts	0x03F9, r27
+     e66:	a0 93 f8 03 	sts	0x03F8, r26
+		dest_y = destination_positions[3];
+     e6a:	f0 92 fb 03 	sts	0x03FB, r15
+     e6e:	e0 92 fa 03 	sts	0x03FA, r14
+     e72:	08 c0       	rjmp	.+16     	; 0xe84 <get_destination+0x18e>
+	}
+	else{
+		dest_x = destination_positions[0];
+     e74:	d0 92 f9 03 	sts	0x03F9, r13
+     e78:	c0 92 f8 03 	sts	0x03F8, r12
+		dest_y = destination_positions[1];
+     e7c:	b0 92 fb 03 	sts	0x03FB, r11
+     e80:	a0 92 fa 03 	sts	0x03FA, r10
+	}
+	/*Now final_dest is the position in arena where the Ar_Objects are present and 
+	we will find a previous position before the last position so that bot will go straight under the ar_Objects */
+		
+	final_dest_x = dest_x;
+     e84:	20 91 f8 03 	lds	r18, 0x03F8
+     e88:	30 91 f9 03 	lds	r19, 0x03F9
+     e8c:	30 93 6d 04 	sts	0x046D, r19
+     e90:	20 93 6c 04 	sts	0x046C, r18
+	final_dest_y = dest_y;
+     e94:	80 91 fa 03 	lds	r24, 0x03FA
+     e98:	90 91 fb 03 	lds	r25, 0x03FB
+     e9c:	90 93 6f 04 	sts	0x046F, r25
+     ea0:	80 93 6e 04 	sts	0x046E, r24
+	// o is orientation of the Ar_object (0,1,2) i.e 0 for 1-1 , 1 for 2-2 , 2 for 3-3
+	if(o == 0) {
+     ea4:	01 15       	cp	r16, r1
+     ea6:	11 05       	cpc	r17, r1
+     ea8:	81 f4       	brne	.+32     	; 0xeca <get_destination+0x1d4>
+		if(dest_x % 2 == 0){
+     eaa:	20 fd       	sbrc	r18, 0
+     eac:	07 c0       	rjmp	.+14     	; 0xebc <get_destination+0x1c6>
+			dest_x = dest_x - 1;
+     eae:	21 50       	subi	r18, 0x01	; 1
+     eb0:	30 40       	sbci	r19, 0x00	; 0
+     eb2:	30 93 f9 03 	sts	0x03F9, r19
+     eb6:	20 93 f8 03 	sts	0x03F8, r18
+     eba:	3d c0       	rjmp	.+122    	; 0xf36 <get_destination+0x240>
+		}
+		else{
+			dest_x = dest_x + 1;
+     ebc:	2f 5f       	subi	r18, 0xFF	; 255
+     ebe:	3f 4f       	sbci	r19, 0xFF	; 255
+     ec0:	30 93 f9 03 	sts	0x03F9, r19
+     ec4:	20 93 f8 03 	sts	0x03F8, r18
+     ec8:	36 c0       	rjmp	.+108    	; 0xf36 <get_destination+0x240>
+		}
+	}
+	else if(o == 1){
+     eca:	01 30       	cpi	r16, 0x01	; 1
+     ecc:	11 05       	cpc	r17, r1
+     ece:	d1 f4       	brne	.+52     	; 0xf04 <get_destination+0x20e>
+		if(dest_x % 2 == 0){
+     ed0:	20 fd       	sbrc	r18, 0
+     ed2:	0c c0       	rjmp	.+24     	; 0xeec <get_destination+0x1f6>
+			dest_x = dest_x + 1;
+     ed4:	2f 5f       	subi	r18, 0xFF	; 255
+     ed6:	3f 4f       	sbci	r19, 0xFF	; 255
+     ed8:	30 93 f9 03 	sts	0x03F9, r19
+     edc:	20 93 f8 03 	sts	0x03F8, r18
+			dest_y = dest_y - 1;
+     ee0:	01 97       	sbiw	r24, 0x01	; 1
+     ee2:	90 93 fb 03 	sts	0x03FB, r25
+     ee6:	80 93 fa 03 	sts	0x03FA, r24
+     eea:	25 c0       	rjmp	.+74     	; 0xf36 <get_destination+0x240>
+		}
+		else{
+			dest_x = dest_x - 1;
+     eec:	21 50       	subi	r18, 0x01	; 1
+     eee:	30 40       	sbci	r19, 0x00	; 0
+     ef0:	30 93 f9 03 	sts	0x03F9, r19
+     ef4:	20 93 f8 03 	sts	0x03F8, r18
+			dest_y = dest_y + 1;
+     ef8:	01 96       	adiw	r24, 0x01	; 1
+     efa:	90 93 fb 03 	sts	0x03FB, r25
+     efe:	80 93 fa 03 	sts	0x03FA, r24
+     f02:	19 c0       	rjmp	.+50     	; 0xf36 <get_destination+0x240>
+		}
+	}
+	else{
+		if(dest_x % 2 == 0){
+     f04:	20 fd       	sbrc	r18, 0
+     f06:	0c c0       	rjmp	.+24     	; 0xf20 <get_destination+0x22a>
+			dest_x = dest_x + 1;
+     f08:	2f 5f       	subi	r18, 0xFF	; 255
+     f0a:	3f 4f       	sbci	r19, 0xFF	; 255
+     f0c:	30 93 f9 03 	sts	0x03F9, r19
+     f10:	20 93 f8 03 	sts	0x03F8, r18
+			dest_y = dest_y + 1;
+     f14:	01 96       	adiw	r24, 0x01	; 1
+     f16:	90 93 fb 03 	sts	0x03FB, r25
+     f1a:	80 93 fa 03 	sts	0x03FA, r24
+     f1e:	0b c0       	rjmp	.+22     	; 0xf36 <get_destination+0x240>
+		}
+		else{
+			dest_x = dest_x - 1;
+     f20:	21 50       	subi	r18, 0x01	; 1
+     f22:	30 40       	sbci	r19, 0x00	; 0
+     f24:	30 93 f9 03 	sts	0x03F9, r19
+     f28:	20 93 f8 03 	sts	0x03F8, r18
+			dest_y = dest_y - 1;
+     f2c:	01 97       	sbiw	r24, 0x01	; 1
+     f2e:	90 93 fb 03 	sts	0x03FB, r25
+     f32:	80 93 fa 03 	sts	0x03FA, r24
+		}
+	}	
+}
+     f36:	28 96       	adiw	r28, 0x08	; 8
+     f38:	0f b6       	in	r0, 0x3f	; 63
+     f3a:	f8 94       	cli
+     f3c:	de bf       	out	0x3e, r29	; 62
+     f3e:	0f be       	out	0x3f, r0	; 63
+     f40:	cd bf       	out	0x3d, r28	; 61
+     f42:	df 91       	pop	r29
+     f44:	cf 91       	pop	r28
+     f46:	1f 91       	pop	r17
+     f48:	0f 91       	pop	r16
+     f4a:	ff 90       	pop	r15
+     f4c:	ef 90       	pop	r14
+     f4e:	df 90       	pop	r13
+     f50:	cf 90       	pop	r12
+     f52:	bf 90       	pop	r11
+     f54:	af 90       	pop	r10
+     f56:	9f 90       	pop	r9
+     f58:	8f 90       	pop	r8
+     f5a:	08 95       	ret
+
+00000f5c <main>:
+int main()
+{
+	  init();
+     f5c:	0e 94 bc 00 	call	0x178	; 0x178 <init>
+	  init_devices();
+     f60:	0e 94 64 05 	call	0xac8	; 0xac8 <init_devices>
+	  uart0_init();
+     f64:	0e 94 7e 01 	call	0x2fc	; 0x2fc <uart0_init>
+	  int n = 0, o;
+	  //Port initialization
+	  DDRC = 0xFF;
+     f68:	8f ef       	ldi	r24, 0xFF	; 255
+     f6a:	87 b9       	out	0x07, r24	; 7
+	  DDRJ = 0xFF;
+     f6c:	80 93 04 01 	sts	0x0104, r24
+	  DDRB = 0xFF;
+     f70:	84 b9       	out	0x04, r24	; 4
+	  DDRK = 0xFF;
+     f72:	80 93 07 01 	sts	0x0107, r24
+	  PORTC = 0xFF;
+     f76:	88 b9       	out	0x08, r24	; 8
+	  PORTJ = 0x00;	  
+     f78:	10 92 05 01 	sts	0x0105, r1
+	  int k;
+	  //check variable is to check the bot is started so that the pebble positions can be sent by the python script
+	  char check;
+	  while(1){
+		  check = uart_rx();
+     f7c:	0e 94 aa 01 	call	0x354	; 0x354 <uart_rx>
+     f80:	c8 2f       	mov	r28, r24
+		  uart_tx(check);
+     f82:	0e 94 92 01 	call	0x324	; 0x324 <uart_tx>
+		 
+		  if(check == '*'){
+     f86:	ca 32       	cpi	r28, 0x2A	; 42
+     f88:	c9 f7       	brne	.-14     	; 0xf7c <main+0x20>
+			  break;
+		  }
+		  
+	  }
+	  
+	  led[0] = led[1] = led[2] = 0;
+     f8a:	10 92 75 04 	sts	0x0475, r1
+     f8e:	10 92 74 04 	sts	0x0474, r1
+     f92:	10 92 73 04 	sts	0x0473, r1
+     f96:	10 92 72 04 	sts	0x0472, r1
+     f9a:	10 92 71 04 	sts	0x0471, r1
+     f9e:	10 92 70 04 	sts	0x0470, r1
+	  get_input();
+     fa2:	0e 94 b2 01 	call	0x364	; 0x364 <get_input>
+	  //initialize previous node and current node according to start position
+	  if(start == 1){
+     fa6:	80 91 ca 03 	lds	r24, 0x03CA
+     faa:	90 91 cb 03 	lds	r25, 0x03CB
+     fae:	81 30       	cpi	r24, 0x01	; 1
+     fb0:	91 05       	cpc	r25, r1
+     fb2:	a9 f4       	brne	.+42     	; 0xfde <main+0x82>
+		  //these are arena positions in grid 
+		  prev_x = -1;
+     fb4:	8f ef       	ldi	r24, 0xFF	; 255
+     fb6:	9f ef       	ldi	r25, 0xFF	; 255
+     fb8:	90 93 05 04 	sts	0x0405, r25
+     fbc:	80 93 04 04 	sts	0x0404, r24
+		  prev_y = 5;
+     fc0:	85 e0       	ldi	r24, 0x05	; 5
+     fc2:	90 e0       	ldi	r25, 0x00	; 0
+     fc4:	90 93 03 04 	sts	0x0403, r25
+     fc8:	80 93 02 04 	sts	0x0402, r24
+		  curr_x = 0;
+     fcc:	10 92 f7 03 	sts	0x03F7, r1
+     fd0:	10 92 f6 03 	sts	0x03F6, r1
+		  curr_y = 5;
+     fd4:	90 93 fd 03 	sts	0x03FD, r25
+     fd8:	80 93 fc 03 	sts	0x03FC, r24
+     fdc:	16 c0       	rjmp	.+44     	; 0x100a <main+0xae>
+	  }
+	  else{
+		  prev_x = 12;
+     fde:	8c e0       	ldi	r24, 0x0C	; 12
+     fe0:	90 e0       	ldi	r25, 0x00	; 0
+     fe2:	90 93 05 04 	sts	0x0405, r25
+     fe6:	80 93 04 04 	sts	0x0404, r24
+		  prev_y = 5;
+     fea:	85 e0       	ldi	r24, 0x05	; 5
+     fec:	90 e0       	ldi	r25, 0x00	; 0
+     fee:	90 93 03 04 	sts	0x0403, r25
+     ff2:	80 93 02 04 	sts	0x0402, r24
+		  curr_x = 11;
+     ff6:	2b e0       	ldi	r18, 0x0B	; 11
+     ff8:	30 e0       	ldi	r19, 0x00	; 0
+     ffa:	30 93 f7 03 	sts	0x03F7, r19
+     ffe:	20 93 f6 03 	sts	0x03F6, r18
+		  curr_y = 5;		  
+    1002:	90 93 fd 03 	sts	0x03FD, r25
+    1006:	80 93 fc 03 	sts	0x03FC, r24
+	  }
+	  n = 0;
+	  
+	  //'destination_positions' is to save the four positions of next cell
+	  int destination_positions[4];
+	  positions_done = 0;
+    100a:	10 92 79 04 	sts	0x0479, r1
+    100e:	10 92 78 04 	sts	0x0478, r1
+
+	  buzzer_of();			
+    1012:	0e 94 02 06 	call	0xc04	; 0xc04 <buzzer_of>
+	  get_destination();
+    1016:	0e 94 7b 06 	call	0xcf6	; 0xcf6 <get_destination>
+	  get_direction();
+    101a:	0e 94 47 04 	call	0x88e	; 0x88e <get_direction>
+	  stop();
+    101e:	0e 94 08 05 	call	0xa10	; 0xa10 <stop>
+    1022:	8f ef       	ldi	r24, 0xFF	; 255
+    1024:	9f ef       	ldi	r25, 0xFF	; 255
+    1026:	ac e2       	ldi	r26, 0x2C	; 44
+    1028:	81 50       	subi	r24, 0x01	; 1
+    102a:	90 40       	sbci	r25, 0x00	; 0
+    102c:	a0 40       	sbci	r26, 0x00	; 0
+    102e:	e1 f7       	brne	.-8      	; 0x1028 <main+0xcc>
+    1030:	00 c0       	rjmp	.+0      	; 0x1032 <main+0xd6>
+    1032:	00 00       	nop
+	  _delay_ms(1000);
+	  n = 0;
+    1034:	cc 24       	eor	r12, r12
+    1036:	dd 24       	eor	r13, r13
+	  {
+		  
+			line_sensor();  
+		  
+		  //forward
+		  if(led[0] == 0 && led[1] == 0 && led[2] == 0){
+    1038:	00 e7       	ldi	r16, 0x70	; 112
+    103a:	14 e0       	ldi	r17, 0x04	; 4
+    103c:	c2 e7       	ldi	r28, 0x72	; 114
+    103e:	d4 e0       	ldi	r29, 0x04	; 4
+			  stop();
+		  }
+		  
+		  else if(led[0] == 0 && led[1] == 1 && led[2] == 0){
+    1040:	0f 2e       	mov	r0, r31
+    1042:	f4 e7       	ldi	r31, 0x74	; 116
+    1044:	ef 2e       	mov	r14, r31
+    1046:	f4 e0       	ldi	r31, 0x04	; 4
+    1048:	ff 2e       	mov	r15, r31
+    104a:	f0 2d       	mov	r31, r0
+					get_direction();
+					n = 0;
+				}
+				else
+				{
+					if(direction[n] == LEFT){
+    104c:	0f 2e       	mov	r0, r31
+    104e:	f8 e0       	ldi	r31, 0x08	; 8
+    1050:	af 2e       	mov	r10, r31
+    1052:	f4 e0       	ldi	r31, 0x04	; 4
+    1054:	bf 2e       	mov	r11, r31
+    1056:	f0 2d       	mov	r31, r0
+				}
+				else if(n == -1){
+					//when we need destination after picking up the bot
+					get_destination();
+					get_direction();
+					n = 0;
+    1058:	88 24       	eor	r8, r8
+    105a:	99 24       	eor	r9, r9
+					else{
+						//magnet_on();
+					}
+					pickup();
+					forward();
+					n = -1;
+    105c:	66 24       	eor	r6, r6
+    105e:	6a 94       	dec	r6
+    1060:	76 2c       	mov	r7, r6
+	  _delay_ms(1000);
+	  n = 0;
+	  while(1)
+	  {
+		  
+			line_sensor();  
+    1062:	0e 94 0c 05 	call	0xa18	; 0xa18 <line_sensor>
+		  
+		  //forward
+		  if(led[0] == 0 && led[1] == 0 && led[2] == 0){
+    1066:	d8 01       	movw	r26, r16
+    1068:	2d 91       	ld	r18, X+
+    106a:	3c 91       	ld	r19, X
+    106c:	11 97       	sbiw	r26, 0x01	; 1
+    106e:	21 15       	cp	r18, r1
+    1070:	31 05       	cpc	r19, r1
+    1072:	e1 f4       	brne	.+56     	; 0x10ac <main+0x150>
+    1074:	88 81       	ld	r24, Y
+    1076:	99 81       	ldd	r25, Y+1	; 0x01
+    1078:	00 97       	sbiw	r24, 0x00	; 0
+    107a:	41 f4       	brne	.+16     	; 0x108c <main+0x130>
+    107c:	f7 01       	movw	r30, r14
+    107e:	80 81       	ld	r24, Z
+    1080:	91 81       	ldd	r25, Z+1	; 0x01
+    1082:	00 97       	sbiw	r24, 0x00	; 0
+    1084:	99 f4       	brne	.+38     	; 0x10ac <main+0x150>
+			  stop();
+    1086:	0e 94 08 05 	call	0xa10	; 0xa10 <stop>
+    108a:	eb cf       	rjmp	.-42     	; 0x1062 <main+0x106>
+		  }
+		  
+		  else if(led[0] == 0 && led[1] == 1 && led[2] == 0){
+    108c:	81 30       	cpi	r24, 0x01	; 1
+    108e:	91 05       	cpc	r25, r1
+    1090:	69 f4       	brne	.+26     	; 0x10ac <main+0x150>
+    1092:	d7 01       	movw	r26, r14
+    1094:	8d 91       	ld	r24, X+
+    1096:	9c 91       	ld	r25, X
+    1098:	11 97       	sbiw	r26, 0x01	; 1
+    109a:	00 97       	sbiw	r24, 0x00	; 0
+    109c:	e9 f4       	brne	.+58     	; 0x10d8 <main+0x17c>
+			  //velocity(122, 117);
+			  velocity(165, 165);
+    109e:	85 ea       	ldi	r24, 0xA5	; 165
+    10a0:	65 ea       	ldi	r22, 0xA5	; 165
+    10a2:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+			  forward();
+    10a6:	0e 94 4c 05 	call	0xa98	; 0xa98 <forward>
+    10aa:	db cf       	rjmp	.-74     	; 0x1062 <main+0x106>
+		  }
+		  else if(led[0] == 1 && led[1] == 0 && led[2] == 0){
+    10ac:	21 30       	cpi	r18, 0x01	; 1
+    10ae:	31 05       	cpc	r19, r1
+    10b0:	81 f4       	brne	.+32     	; 0x10d2 <main+0x176>
+    10b2:	88 81       	ld	r24, Y
+    10b4:	99 81       	ldd	r25, Y+1	; 0x01
+    10b6:	00 97       	sbiw	r24, 0x00	; 0
+    10b8:	61 f4       	brne	.+24     	; 0x10d2 <main+0x176>
+    10ba:	f7 01       	movw	r30, r14
+    10bc:	80 81       	ld	r24, Z
+    10be:	91 81       	ldd	r25, Z+1	; 0x01
+    10c0:	00 97       	sbiw	r24, 0x00	; 0
+    10c2:	89 f5       	brne	.+98     	; 0x1126 <main+0x1ca>
+			  //velocity(120,130);
+			  velocity(165, 160);
+    10c4:	85 ea       	ldi	r24, 0xA5	; 165
+    10c6:	60 ea       	ldi	r22, 0xA0	; 160
+    10c8:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+			  soft_right();
+    10cc:	0e 94 60 05 	call	0xac0	; 0xac0 <soft_right>
+    10d0:	c8 cf       	rjmp	.-112    	; 0x1062 <main+0x106>
+		  }
+		  else if(led[0] == 0 && led[1] == 0 && led[2] == 1){
+    10d2:	21 15       	cp	r18, r1
+    10d4:	31 05       	cpc	r19, r1
+    10d6:	19 f5       	brne	.+70     	; 0x111e <main+0x1c2>
+    10d8:	88 81       	ld	r24, Y
+    10da:	99 81       	ldd	r25, Y+1	; 0x01
+    10dc:	00 97       	sbiw	r24, 0x00	; 0
+    10de:	71 f4       	brne	.+28     	; 0x10fc <main+0x1a0>
+    10e0:	d7 01       	movw	r26, r14
+    10e2:	8d 91       	ld	r24, X+
+    10e4:	9c 91       	ld	r25, X
+    10e6:	11 97       	sbiw	r26, 0x01	; 1
+    10e8:	81 30       	cpi	r24, 0x01	; 1
+    10ea:	91 05       	cpc	r25, r1
+    10ec:	c1 f4       	brne	.+48     	; 0x111e <main+0x1c2>
+			  //velocity(130, 120);
+			  velocity(165, 160);
+    10ee:	85 ea       	ldi	r24, 0xA5	; 165
+    10f0:	60 ea       	ldi	r22, 0xA0	; 160
+    10f2:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+			  soft_left();
+    10f6:	0e 94 5c 05 	call	0xab8	; 0xab8 <soft_left>
+    10fa:	b3 cf       	rjmp	.-154    	; 0x1062 <main+0x106>
+		  }
+		  else if(led[0] == 0 && led[1] == 1 && led[2] == 1){
+    10fc:	81 30       	cpi	r24, 0x01	; 1
+    10fe:	91 05       	cpc	r25, r1
+    1100:	71 f4       	brne	.+28     	; 0x111e <main+0x1c2>
+    1102:	f7 01       	movw	r30, r14
+    1104:	80 81       	ld	r24, Z
+    1106:	91 81       	ldd	r25, Z+1	; 0x01
+    1108:	81 30       	cpi	r24, 0x01	; 1
+    110a:	91 05       	cpc	r25, r1
+    110c:	09 f0       	breq	.+2      	; 0x1110 <main+0x1b4>
+    110e:	a9 cf       	rjmp	.-174    	; 0x1062 <main+0x106>
+			  velocity(130,120);
+    1110:	82 e8       	ldi	r24, 0x82	; 130
+    1112:	68 e7       	ldi	r22, 0x78	; 120
+    1114:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+			  //velocity(165, 160);
+			  soft_left();
+    1118:	0e 94 5c 05 	call	0xab8	; 0xab8 <soft_left>
+    111c:	a2 cf       	rjmp	.-188    	; 0x1062 <main+0x106>
+		  }
+		  else if(led[0] == 1 && led[1] == 1 && led[2] == 0){
+    111e:	21 30       	cpi	r18, 0x01	; 1
+    1120:	31 05       	cpc	r19, r1
+    1122:	09 f0       	breq	.+2      	; 0x1126 <main+0x1ca>
+    1124:	9e cf       	rjmp	.-196    	; 0x1062 <main+0x106>
+    1126:	88 81       	ld	r24, Y
+    1128:	99 81       	ldd	r25, Y+1	; 0x01
+    112a:	81 30       	cpi	r24, 0x01	; 1
+    112c:	91 05       	cpc	r25, r1
+    112e:	09 f0       	breq	.+2      	; 0x1132 <main+0x1d6>
+    1130:	98 cf       	rjmp	.-208    	; 0x1062 <main+0x106>
+    1132:	d7 01       	movw	r26, r14
+    1134:	8d 91       	ld	r24, X+
+    1136:	9c 91       	ld	r25, X
+    1138:	11 97       	sbiw	r26, 0x01	; 1
+    113a:	00 97       	sbiw	r24, 0x00	; 0
+    113c:	09 f0       	breq	.+2      	; 0x1140 <main+0x1e4>
+    113e:	4c c0       	rjmp	.+152    	; 0x11d8 <main+0x27c>
+			  velocity(120,130);
+    1140:	88 e7       	ldi	r24, 0x78	; 120
+    1142:	62 e8       	ldi	r22, 0x82	; 130
+    1144:	0e 94 fd 04 	call	0x9fa	; 0x9fa <velocity>
+			  //velocity(165, 160);
+			  soft_right();
+    1148:	0e 94 60 05 	call	0xac0	; 0xac0 <soft_right>
+    114c:	8a cf       	rjmp	.-236    	; 0x1062 <main+0x106>
+		  }
+		   else if(led[0] == 1 && led[1] == 1 && led[2] == 1){
+				//node detected 
+				if(n == num_direction){
+    114e:	80 91 06 04 	lds	r24, 0x0406
+    1152:	90 91 07 04 	lds	r25, 0x0407
+    1156:	c8 16       	cp	r12, r24
+    1158:	d9 06       	cpc	r13, r25
+    115a:	89 f4       	brne	.+34     	; 0x117e <main+0x222>
+					//reached the destination
+					uart_tx('#');
+    115c:	83 e2       	ldi	r24, 0x23	; 35
+    115e:	0e 94 92 01 	call	0x324	; 0x324 <uart_tx>
+					if(flag_magnet == 0){
+    1162:	80 91 76 04 	lds	r24, 0x0476
+    1166:	90 91 77 04 	lds	r25, 0x0477
+    116a:	00 97       	sbiw	r24, 0x00	; 0
+    116c:	11 f4       	brne	.+4      	; 0x1172 <main+0x216>
+						magnet_on();						
+    116e:	0e 94 04 06 	call	0xc08	; 0xc08 <magnet_on>
+					}
+					else{
+						//magnet_on();
+					}
+					pickup();
+    1172:	0e 94 0b 06 	call	0xc16	; 0xc16 <pickup>
+					forward();
+    1176:	0e 94 4c 05 	call	0xa98	; 0xa98 <forward>
+					n = -1;
+    117a:	63 01       	movw	r12, r6
+    117c:	72 cf       	rjmp	.-284    	; 0x1062 <main+0x106>
+				}
+				else if(n == -1){
+    117e:	bf ef       	ldi	r27, 0xFF	; 255
+    1180:	cb 16       	cp	r12, r27
+    1182:	bf ef       	ldi	r27, 0xFF	; 255
+    1184:	db 06       	cpc	r13, r27
+    1186:	31 f4       	brne	.+12     	; 0x1194 <main+0x238>
+					//when we need destination after picking up the bot
+					get_destination();
+    1188:	0e 94 7b 06 	call	0xcf6	; 0xcf6 <get_destination>
+					get_direction();
+    118c:	0e 94 47 04 	call	0x88e	; 0x88e <get_direction>
+					n = 0;
+    1190:	64 01       	movw	r12, r8
+    1192:	67 cf       	rjmp	.-306    	; 0x1062 <main+0x106>
+				}
+				else
+				{
+					if(direction[n] == LEFT){
+    1194:	c6 01       	movw	r24, r12
+    1196:	88 0f       	add	r24, r24
+    1198:	99 1f       	adc	r25, r25
+    119a:	8a 0d       	add	r24, r10
+    119c:	9b 1d       	adc	r25, r11
+    119e:	fc 01       	movw	r30, r24
+    11a0:	80 81       	ld	r24, Z
+    11a2:	91 81       	ldd	r25, Z+1	; 0x01
+    11a4:	00 97       	sbiw	r24, 0x00	; 0
+    11a6:	31 f4       	brne	.+12     	; 0x11b4 <main+0x258>
+						new_left();
+    11a8:	0e 94 6b 05 	call	0xad6	; 0xad6 <new_left>
+						uart_tx('L');
+    11ac:	8c e4       	ldi	r24, 0x4C	; 76
+    11ae:	0e 94 92 01 	call	0x324	; 0x324 <uart_tx>
+    11b2:	0e c0       	rjmp	.+28     	; 0x11d0 <main+0x274>
+					}
+					else if(direction[n] == RIGHT){
+    11b4:	81 30       	cpi	r24, 0x01	; 1
+    11b6:	91 05       	cpc	r25, r1
+    11b8:	31 f4       	brne	.+12     	; 0x11c6 <main+0x26a>
+						new_right();
+    11ba:	0e 94 97 05 	call	0xb2e	; 0xb2e <new_right>
+						uart_tx('R');
+    11be:	82 e5       	ldi	r24, 0x52	; 82
+    11c0:	0e 94 92 01 	call	0x324	; 0x324 <uart_tx>
+    11c4:	05 c0       	rjmp	.+10     	; 0x11d0 <main+0x274>
+					}
+					else{
+						uart_tx('E');
+    11c6:	85 e4       	ldi	r24, 0x45	; 69
+    11c8:	0e 94 92 01 	call	0x324	; 0x324 <uart_tx>
+						reverse();					
+    11cc:	0e 94 c1 05 	call	0xb82	; 0xb82 <reverse>
+					}
+					n++;	  
+    11d0:	08 94       	sec
+    11d2:	c1 1c       	adc	r12, r1
+    11d4:	d1 1c       	adc	r13, r1
+    11d6:	45 cf       	rjmp	.-374    	; 0x1062 <main+0x106>
+		  else if(led[0] == 1 && led[1] == 1 && led[2] == 0){
+			  velocity(120,130);
+			  //velocity(165, 160);
+			  soft_right();
+		  }
+		   else if(led[0] == 1 && led[1] == 1 && led[2] == 1){
+    11d8:	d7 01       	movw	r26, r14
+    11da:	8d 91       	ld	r24, X+
+    11dc:	9c 91       	ld	r25, X
+    11de:	11 97       	sbiw	r26, 0x01	; 1
+    11e0:	81 30       	cpi	r24, 0x01	; 1
+    11e2:	91 05       	cpc	r25, r1
+    11e4:	09 f0       	breq	.+2      	; 0x11e8 <main+0x28c>
+    11e6:	3d cf       	rjmp	.-390    	; 0x1062 <main+0x106>
+    11e8:	b2 cf       	rjmp	.-156    	; 0x114e <main+0x1f2>
+
+000011ea <_exit>:
+    11ea:	f8 94       	cli
+
+000011ec <__stop_program>:
+    11ec:	ff cf       	rjmp	.-2      	; 0x11ec <__stop_program>
