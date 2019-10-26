@@ -9,7 +9,7 @@ This is repository for the project done by our team for E-Yantra Robotics Compet
 <p>The story of Crow and Water Pitcher is one of Aesop’s Fables which everybody has heard in their childhoods. This theme aims to bring this age-old able to life using Augmented Reality with it’s theme - Thirsty Crow. A robot called Crow is deployed in a field where it has to pick up pebbles from different locations in an Arena and drop them at a specific location labeled as Water Pitcher. At the same time, on a virtual screen the story comes to life with the help of AR and special markers. 3D models of Crow, Pebbles and Pitcher (created by teams) are projected on an image of the arena.
  
 <p>The aim of the theme is to complete the task in the shortest time possible. The team which deposits all the pebbles in the water pitcher and projects all 3D models correctly will be declared the WINNER.</p>
-<h3>Technology Envolved</h3>
+<h3>Technology Involved</h3>
 <ul>
   <li>Image Processing using OpenCV</li>
   <li>Graphics Processing using OpenGL</li>
