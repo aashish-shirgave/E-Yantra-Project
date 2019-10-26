@@ -92,51 +92,9 @@ char uart_rx()
 	return UDR0;
 }
 
-/* 
-*Function Name: get_input
-*Input: none
-*Output: none
-*Logic: this function takes input from Xbee module and saves in variable Xbee_input and converts that
-	in positions and orientation arrays.
-	Xbee input format
-	1) start position
-	2)position of the first pebble 
-	3)orientation of first pebble
-	4)position of water pitcher
-	5)orientation of water pitcher
-	.
-	.
-	.
-	such that
-*Example Call: get_input();
-*/ 
 
-/***********************************************************************************************************/
-void get_input(){ 
-	int i,k,o;
-	char ch = 0;
-	
-	uart0_init();
-	i = 0;
-	//getting input from xbee
-	while(ch != '*'){
-		ch = uart_rx();
-		xbee_input[i++] = ch;
-		uart_tx(xbee_input[i - 1]);
-						
-	}
-	start = xbee_input[0] - '0';
-	i = 1;
-	num_positions = 0;
-	ch = xbee_input[i];
-	//the positions and the respective orientations are saved in arrays
-	while(ch != '*'){
-		position[num_positions] = xbee_input[i++] - 'a';
-		orientation[num_positions] = xbee_input[i++] - '0';
-		num_positions++;
-		ch = xbee_input[i];
-	}	
-}
+
+
 /***********************************************************************************/
 
 /*
@@ -632,15 +590,7 @@ void reverse(){
 	}
 	
 }
-/*Function Name: buzzer_on()
-*Input: none
-*Output: none
-*Logic:Turns ON the buzzer
-*Example Call:
-*/
-void buzzer_on(){
-	PORTB = 0xFF;
-}
+
 /*
 *Function Name: buzzer_of
 *Input: none
@@ -651,15 +601,14 @@ void buzzer_on(){
 void buzzer_of(){
 	PORTB = 0x00;
 }
-/*
-*Function Name: magnet_on
+/*Function Name: buzzer_on()
 *Input: none
 *Output: none
-*Logic: Turns ON the magnet
+*Logic:Turns ON the buzzer
 *Example Call:
 */
-void magnet_on(){
-	PORTK = 0xFF;
+void buzzer_on(){
+	PORTB = 0xFF;
 }
 /*
 *Function Name: magnet_of
@@ -670,6 +619,16 @@ void magnet_on(){
 */
 void magnet_of(){
 	PORTK = 0x00;
+}
+/*
+*Function Name: magnet_on
+*Input: none
+*Output: none
+*Logic: Turns ON the magnet
+*Example Call:
+*/
+void magnet_on(){
+	PORTK = 0xFF;
 }
 /*
 *Function Name: pickup
@@ -797,6 +756,50 @@ get_destination(){
 			dest_x = dest_x - 1;
 			dest_y = dest_y - 1;
 		}
+	}	
+}
+/* 
+*Function Name: get_input
+*Input: none
+*Output: none
+*Logic: this function takes input from Xbee module and saves in variable Xbee_input and converts that
+	in positions and orientation arrays.
+	Xbee input format
+	1) start position
+	2)position of the first pebble 
+	3)orientation of first pebble
+	4)position of water pitcher
+	5)orientation of water pitcher
+	.
+	.
+	.
+	such that
+*Example Call: get_input();
+*/ 
+/***********************************************************************************************************/
+void get_input(){ 
+	int i,k,o;
+	char ch = 0;
+	
+	uart0_init();
+	i = 0;
+	//getting input from xbee
+	while(ch != '*'){
+		ch = uart_rx();
+		xbee_input[i++] = ch;
+		uart_tx(xbee_input[i - 1]);
+						
+	}
+	start = xbee_input[0] - '0';
+	i = 1;
+	num_positions = 0;
+	ch = xbee_input[i];
+	//the positions and the respective orientations are saved in arrays
+	while(ch != '*'){
+		position[num_positions] = xbee_input[i++] - 'a';
+		orientation[num_positions] = xbee_input[i++] - '0';
+		num_positions++;
+		ch = xbee_input[i];
 	}	
 }
 int main()
