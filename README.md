@@ -1,4 +1,4 @@
-# E-Yantra-Project
+# E-Yantra-Project ( Thirsty Crow )
 This is repository for the project done by our team for E-Yantra Robotics Competition 2018
 
 <h3>About competition</h3>
