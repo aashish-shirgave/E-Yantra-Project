@@ -1,6 +1,9 @@
 # E-Yantra-Project ( Thirsty Crow )
 This is repository for the project done by our team for E-Yantra Robotics Competition 2018
 
+My Team interview at E-Yantra 2018, IIT Bombay <br>
+https://youtu.be/cGEJl10H7wQ 
+
 <h3>About competition</h3>
 <p>e-Yantra Robotics Competition (eYRC) is a unique annual competition for undergraduate students in science and colleges. Selected teams are given a robotic kit complete with accessories and video tutorials to help them learn basic concepts in embedded systems and microcontroller programming. Abstracts of real world problems assigned as "themes" are then implemented by the teams using the robotic kits. The theme assigned to the team is <b>"Thirsty Crow"</b>. </p>
 
